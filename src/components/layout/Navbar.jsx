@@ -2,6 +2,13 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X, Search } from 'lucide-react'
 import { motion } from 'framer-motion'
+import secanLogo from '@/assets/secan-logo.png'
+import { FaFacebookF, FaLinkedinIn, FaYoutube } from 'react-icons/fa6'
+import { RiTwitterXFill } from 'react-icons/ri'
+import { FacebookIcon } from '@/components/icons/FacebookIcon'
+import { TwitterXIcon } from '@/components/icons/TwitterXIcon'
+import { LinkedInIcon } from '@/components/icons/LinkedInIcon'
+import { YoutubeIcon } from '@/components/icons/YoutubeIcon'
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -16,6 +23,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -69,42 +77,47 @@ export function Navbar() {
     { name: 'Career Center', link: '/career-center' }, // no submenu
   ]
 
-  const socialIcons = [
-    { label: 'Facebook', href: '#' },
-    { label: 'Twitter', href: '#' },
-    { label: 'LinkedIn', href: '#' },
-    { label: 'YouTube', href: '#' },
-  ]
-
+const socialIcons = [
+  { label: 'Facebook', href: '#', icon: FacebookIcon },
+  { label: 'Twitter', href: '#', icon: TwitterXIcon },
+  { label: 'LinkedIn', href: '#', icon: LinkedInIcon },
+  { label: 'YouTube', href: '#', icon: YoutubeIcon },
+]
   return (
     <>
       {/* Top Bar */}
       <div className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <div className="flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between">
+
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-2 w-60">
+            <img src={secanLogo} alt="SECAN Logo" />
+          </Link>
+
+          <div className="flex justify-end items-center gap-5">
             <div className="flex items-center gap-6 text-sm">
-              <a href="#" className="text-gray-700 hover:text-primary transition">Member Portal</a>
-              <a href="#" className="text-gray-700 hover:text-primary transition">Join SECAN</a>
-              <a href="#" className="text-gray-700 hover:text-primary transition">Contact Us</a>
+              <a href="#" className="text-green-700 hover:text-primary transition lg:text-xs font-semibold">Member Portal</a>
+              <a href="#" className="text-green-700 hover:text-primary transition lg:text-xs font-semibold">Join SECAN</a>
+              <a href="#" className="text-green-700 hover:text-primary transition lg:text-xs font-semibold">Contact Us</a>
             </div>
 
             <div className="flex items-center gap-4">
               <div className="flex gap-3">
-                {socialIcons.map((item) => (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    aria-label={item.label}
-                    className="text-gray-600 hover:text-primary transition text-sm"
-                  >
-                    {item.label === 'Facebook' && '📘'}
-                    {item.label === 'Twitter' && '𝕏'}
-                    {item.label === 'LinkedIn' && '💼'}
-                    {item.label === 'YouTube' && '▶'}
-                  </a>
-                ))}
+                {socialIcons.map((item) => {
+                  const Icon = item.icon
+                  return (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      aria-label={item.label}
+                      className="text-gray-600 hover:text-primary transition"
+                    >
+                      <Icon size={18} />
+                    </a>
+                  )
+                })}
               </div>
-              <button className="text-gray-600 hover:text-primary transition p-1">
+              <button className="text-green-600 hover:text-primary transition p-1">
                 <Search size={18} />
               </button>
             </div>
@@ -113,19 +126,12 @@ export function Navbar() {
       </div>
 
       {/* Main Navbar */}
-      <nav className="sticky top-0 z-50 bg-white shadow-sm">
+      <nav className="sticky top-0 z-50 bg-white shadow-[0_1px_2px_0_rgb(0,0,0,0.05)] ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-2">
-            {/* Logo */}
-            <Link to="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-white font-bold">
-                S
-              </div>
-              <span className="font-bold text-lg text-primary hidden sm:inline">SECAN</span>
-            </Link>
+          <div className="flex justify-end items-center py-2 gap-8">
 
             {/* Desktop Menu — dropdown pattern from El-Neema */}
-            <NavigationMenu className="hidden lg:flex">
+            <NavigationMenu className="hidden lg:flex justify-start">
               <NavigationMenuList>
                 {menuItems.map((item, index) => (
                   <NavigationMenuItem key={index}>
@@ -141,7 +147,7 @@ export function Navbar() {
                                 <NavigationMenuLink asChild>
                                   <Link
                                     to={subItem.link}
-                                    className="block rounded-md px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary"
+                                    className="block rounded-md px-3 py-2 text-sm text-green-700 hover:bg-green-100 hover:text-primary"
                                   >
                                     {subItem.name}
                                   </Link>
@@ -177,7 +183,7 @@ export function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 text-gray-700"
+              className="lg:hidden p-2 text-green-700"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -189,13 +195,13 @@ export function Navbar() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="lg:hidden pb-4 border-t border-gray-200"
+              className="lg:hidden pb-4 border-t border-green-200"
             >
               {menuItems.map((item, index) =>
                 item.subMenu ? (
                   <Accordion key={index} type="single" collapsible>
                     <AccordionItem value={`item-${index}`}>
-                      <AccordionTrigger className="text-sm font-medium text-gray-700 py-2">
+                      <AccordionTrigger className="text-sm font-medium text-green-700 py-2">
                         {item.name}
                       </AccordionTrigger>
                       <AccordionContent>
@@ -204,7 +210,7 @@ export function Navbar() {
                             <li key={subIndex}>
                               <Link
                                 to={subItem.link}
-                                className="block py-2 text-sm text-gray-600 hover:text-primary"
+                                className="block py-2 text-sm text-green-600 hover:text-primary"
                                 onClick={() => setIsOpen(false)}
                               >
                                 {subItem.name}
@@ -219,7 +225,7 @@ export function Navbar() {
                   <Link
                     key={index}
                     to={item.link}
-                    className="block py-2 text-gray-700 hover:text-primary transition text-sm"
+                    className="block py-2 text-green-700 hover:text-primary transition text-sm"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}

@@ -8,7 +8,7 @@ function App() {
       <div className="">
         <Navbar />
         <main>
-          Hello, It's Arizon
+          
         </main>
       </div>
     </BrowserRouter>
