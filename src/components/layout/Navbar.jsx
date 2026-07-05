@@ -1,0 +1,238 @@
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Menu, X, Search } from 'lucide-react'
+import { motion } from 'framer-motion'
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
+export function Navbar() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const menuItems = [
+    {
+      name: 'About SECAN',
+      subMenu: [
+        { name: 'Our Mission', link: '/about/mission' },
+        { name: 'Executive Council', link: '/about/council' },
+        { name: 'History', link: '/about/history' },
+      ],
+    },
+    {
+      name: 'Membership',
+      subMenu: [
+        { name: 'Benefits', link: '/membership/benefits' },
+        { name: 'Categories', link: '/membership/categories' },
+        { name: 'Apply', link: '/membership/apply' },
+      ],
+    },
+    {
+      name: 'Events',
+      subMenu: [
+        { name: 'Upcoming Conferences', link: '/events/upcoming' },
+        { name: 'Past Events', link: '/events/past' },
+      ],
+    },
+    {
+      name: 'Publications',
+      subMenu: [
+        { name: 'JECA Journal', link: '/publications/jeca' },
+        { name: 'Newsletter', link: '/publications/newsletter' },
+        { name: 'Position Statements', link: '/publications/statements' },
+      ],
+    },
+    {
+      name: 'Awards & Grants',
+      subMenu: [
+        { name: 'Research Grants', link: '/awards/grants' },
+        { name: 'Award Categories', link: '/awards/categories' },
+      ],
+    },
+    {
+      name: 'Resources',
+      subMenu: [
+        { name: 'Member Directory', link: '/resources/directory' },
+        { name: 'FAQ', link: '/resources/faq' },
+      ],
+    },
+    { name: 'Career Center', link: '/career-center' }, // no submenu
+  ]
+
+  const socialIcons = [
+    { label: 'Facebook', href: '#' },
+    { label: 'Twitter', href: '#' },
+    { label: 'LinkedIn', href: '#' },
+    { label: 'YouTube', href: '#' },
+  ]
+
+  return (
+    <>
+      {/* Top Bar */}
+      <div className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <div className="flex justify-between items-center">
+            <div className="flex items-center gap-6 text-sm">
+              <a href="#" className="text-gray-700 hover:text-primary transition">Member Portal</a>
+              <a href="#" className="text-gray-700 hover:text-primary transition">Join SECAN</a>
+              <a href="#" className="text-gray-700 hover:text-primary transition">Contact Us</a>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <div className="flex gap-3">
+                {socialIcons.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    aria-label={item.label}
+                    className="text-gray-600 hover:text-primary transition text-sm"
+                  >
+                    {item.label === 'Facebook' && '📘'}
+                    {item.label === 'Twitter' && '𝕏'}
+                    {item.label === 'LinkedIn' && '💼'}
+                    {item.label === 'YouTube' && '▶'}
+                  </a>
+                ))}
+              </div>
+              <button className="text-gray-600 hover:text-primary transition p-1">
+                <Search size={18} />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navbar */}
+      <nav className="sticky top-0 z-50 bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-2">
+            {/* Logo */}
+            <Link to="/" className="flex items-center gap-2">
+              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-white font-bold">
+                S
+              </div>
+              <span className="font-bold text-lg text-primary hidden sm:inline">SECAN</span>
+            </Link>
+
+            {/* Desktop Menu — dropdown pattern from El-Neema */}
+            <NavigationMenu className="hidden lg:flex">
+              <NavigationMenuList>
+                {menuItems.map((item, index) => (
+                  <NavigationMenuItem key={index}>
+                    {item.subMenu ? (
+                      <>
+                        <NavigationMenuTrigger className="bg-transparent text-green-700 text-sm lg:text-xs font-bold uppercase">
+                          {item.name}
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                          <ul className="grid gap-1 p-3 w-[220px] bg-[#eee]">
+                            {item.subMenu.map((subItem, subIndex) => (
+                              <li key={subIndex} className='m-0 p-0'>
+                                <NavigationMenuLink asChild>
+                                  <Link
+                                    to={subItem.link}
+                                    className="block rounded-md px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary"
+                                  >
+                                    {subItem.name}
+                                  </Link>
+                                </NavigationMenuLink>
+                              </li>
+                            ))}
+                          </ul>
+                        </NavigationMenuContent>
+                      </>
+                    ) : (
+                      <Link
+                        to={item.link}
+                        className="text-green-700 hover:text-primary transition text-sm lg:text-xs
+                        font-bold uppercase px-3 py-2 inline-block"
+                      >
+                        {item.name}
+                      </Link>
+                    )}
+                  </NavigationMenuItem>
+                ))}
+              </NavigationMenuList>
+            </NavigationMenu>
+
+            {/* Right Button - Desktop */}
+            <div className="hidden lg:block">
+              <button className="bg-red-400 hover:bg-secondary/90 text-white px-4 py-2 rounded font-semibold
+              text-sm
+               transition transform hover:scale-105">
+                JOIN SECAN
+              </button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="lg:hidden p-2 text-gray-700"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+
+          {/* Mobile Menu — accordion for items with submenus */}
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="lg:hidden pb-4 border-t border-gray-200"
+            >
+              {menuItems.map((item, index) =>
+                item.subMenu ? (
+                  <Accordion key={index} type="single" collapsible>
+                    <AccordionItem value={`item-${index}`}>
+                      <AccordionTrigger className="text-sm font-medium text-gray-700 py-2">
+                        {item.name}
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <ul className="flex flex-col pl-3">
+                          {item.subMenu.map((subItem, subIndex) => (
+                            <li key={subIndex}>
+                              <Link
+                                to={subItem.link}
+                                className="block py-2 text-sm text-gray-600 hover:text-primary"
+                                onClick={() => setIsOpen(false)}
+                              >
+                                {subItem.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                ) : (
+                  <Link
+                    key={index}
+                    to={item.link}
+                    className="block py-2 text-gray-700 hover:text-primary transition text-sm"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )
+              )}
+              <button className="w-full mt-4 bg-secondary hover:bg-secondary/90 text-white px-6 py-2 rounded font-semibold transition">
+                JOIN SECAN
+              </button>
+            </motion.div>
+          )}
+        </div>
+      </nav>
+    </>
+  )
+}
