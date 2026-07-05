@@ -132,7 +132,7 @@ const socialIcons = [
 
             
           {/* Logo */}
-          <Link to="/" className="lg:hidden flex items-center gap-2 w-60">
+          <Link to="/" className="lg:hidden flex items-center gap-2 w-50">
             <img src={secanLogo} alt="SECAN Logo" />
           </Link>
 
