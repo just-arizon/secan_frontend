@@ -87,7 +87,7 @@ const socialIcons = [
     <>
       {/* Top Bar */}
       <div className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 hidden lg:flex justify-between">
 
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 w-60">
@@ -128,7 +128,14 @@ const socialIcons = [
       {/* Main Navbar */}
       <nav className="sticky top-0 z-50 bg-white shadow-[0_1px_2px_0_rgb(0,0,0,0.05)] ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-end items-center py-2 gap-8">
+          <div className="flex lg:justify-end justify-between items-center py-2 gap-8">
+
+            
+          {/* Logo */}
+          <Link to="/" className="lg:hidden flex items-center gap-2 w-60">
+            <img src={secanLogo} alt="SECAN Logo" />
+          </Link>
+
 
             {/* Desktop Menu — dropdown pattern from El-Neema */}
             <NavigationMenu className="hidden lg:flex justify-start">
