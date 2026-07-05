@@ -29,9 +29,9 @@ export function Footer() {
             <Link to="/" className="flex items-start gap-2 w-15 flex shrink-0">
               <img src={secanLogoFooter} alt="SECAN Logo" />
             </Link>
-            <div className="">
+            <div className="text-xs">
                 <h3 className="text-lg font-bold mb-2">SECAN</h3>
-                <p className="text-sm text-white/80 mb-2">
+                <p className=" text-white/80 mb-2">
                   The leading professional body for anatomists in Nigeria, committed
                   to excellence in anatomical science.
                 </p>
@@ -42,7 +42,7 @@ export function Footer() {
           </div>
 
           {/* Column 2: Quick Links */}
-          <div>
+          <div className="text-xs">
             <h3 className="text-lg font-bold mb-4">QUICK LINKS</h3>
             <ul className="space-y-2 text-sm">
               <li>
