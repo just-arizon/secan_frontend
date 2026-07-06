@@ -44,7 +44,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="font-heading text-3xl md:text-5xl font-bold text-white leading-tight mb-4"
+            className="font-heading text-3xl md:text-5xl font-extrabold text-white leading-tight mb-4"
           >
             Advancing Anatomical Sciences in Nigeria and Beyond
           </motion.h1>
