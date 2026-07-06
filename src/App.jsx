@@ -6,7 +6,7 @@ import { Hero } from "@/components/layout/Hero"
 import { StatsBar } from "@/components/layout/StatsBar"
 import './App.css'
 import { Partners } from './components/layout/Partners'
-
+import { FeaturedEventBenefits } from './components/layout/FeaturedEventBenefits'
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +15,7 @@ function App() {
         <main>
           <Hero />
           <StatsBar />
+          <FeaturedEventBenefits />
           <NewsSpotlight />
         </main>
         <Partners />
