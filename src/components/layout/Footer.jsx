@@ -35,9 +35,9 @@ export function Footer() {
                   The leading professional body for anatomists in Nigeria, committed
                   to excellence in anatomical science.
                 </p>
-                <p className="text-sm text-white/80">
+                {/* <p className="text-sm text-white/80">
                   <strong>Founded:</strong> 1995
-                </p>
+                </p> */}
             </div>
           </div>
 

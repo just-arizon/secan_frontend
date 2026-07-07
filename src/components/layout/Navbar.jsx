@@ -145,10 +145,10 @@ const socialIcons = [
                         <NavigationMenuTrigger className="bg-transparent text-green-700 text-sm lg:text-xs font-bold uppercase">
                           {item.name}
                         </NavigationMenuTrigger>
-                        <NavigationMenuContent>
-                          <ul className="grid gap-1 p-3 w-[220px] bg-[#eee]">
+                        <NavigationMenuContent className="p-0 border-none">
+                          <ul className="grid gap-1 w-[220px] bg-[#fff] m-0 rounded-md p-2">
                             {item.subMenu.map((subItem, subIndex) => (
-                              <li key={subIndex} className='m-0 p-0'>
+                              <li key={subIndex} className=''>
                                 <NavigationMenuLink asChild>
                                   <Link
                                     to={subItem.link}
