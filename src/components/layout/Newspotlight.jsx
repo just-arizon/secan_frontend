@@ -1,22 +1,21 @@
 // src/components/sections/NewsSpotlight.jsx
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
-import jecaCover from '@/assets/jeca-cover.png'
-import newsWebinar from '@/assets/news/webinar.png'
-import newsAwards from '@/assets/news/awards.png'
-import newsConference from '@/assets/news/conference.png'
-import memberPhoto from '@/assets/chioma-okafor.png'
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import jecaCover from "@/assets/jeca-cover.png";
+import newsWebinar from "@/assets/news/webinar.png";
+import newsAwards from "@/assets/news/awards.png";
+import newsConference from "@/assets/news/conference.png";
+import memberPhoto from "@/assets/chioma-okafor.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-}
+};
 
 export function NewsSpotlight() {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-10">
-
         {/* Column 1: JECA Spotlight */}
         <motion.div
           initial="hidden"
@@ -24,9 +23,16 @@ export function NewsSpotlight() {
           viewport={{ once: true }}
           variants={fadeUp}
         >
-          <h2 className="text-lg font-bold text-green-700 uppercase mb-4">
+
+
+            <div className="mb-6">
+                     <h2 className="text-lg font-bold text-green-700 uppercase">
             JECA Spotlight
           </h2>
+            <div className="w-full bg-gray-200 h-1 rounded relative">
+              <div className="bg-green-700 w-35 h-1 absolute rounded"></div>
+            </div>
+          </div>
 
           <div className="flex gap-4">
             <img
@@ -39,7 +45,8 @@ export function NewsSpotlight() {
                 Journal of Experimental and Clinical Anatomy
               </h3>
               <p className="text-sm text-gray-600 mb-4">
-                A peer-reviewed journal publishing original research in all areas of anatomy.
+                A peer-reviewed journal publishing original research in all
+                areas of anatomy.
               </p>
               <div className="flex flex-col gap-2">
                 <Link
@@ -73,10 +80,14 @@ export function NewsSpotlight() {
           variants={fadeUp}
           transition={{ delay: 0.1 }}
         >
-          <h2 className="text-lg font-bold text-green-700 uppercase mb-4">
-            Latest News
-          </h2>
-
+          <div className="mb-6">
+            <h2 className="text-lg font-bold text-green-700 uppercase">
+              Latest News
+            </h2>
+            <div className="w-full bg-gray-200 h-1 rounded relative">
+              <div className="bg-green-700 w-30 h-1 absolute rounded"></div>
+            </div>
+          </div>
           <div className="flex flex-col gap-5">
             <NewsItem
               image={newsWebinar}
@@ -114,9 +125,14 @@ export function NewsSpotlight() {
           variants={fadeUp}
           transition={{ delay: 0.2 }}
         >
-          <h2 className="text-lg font-bold text-green-700 uppercase mb-4">
-            Member Spotlight
-          </h2>
+          <div className="mb-6">
+            <h2 className="text-lg font-bold text-green-700 uppercase">
+              Member Spotlight
+            </h2>
+            <div className="w-full bg-gray-200 h-1 rounded relative">
+              <div className="bg-green-700 w-45 h-1 absolute rounded"></div>
+            </div>
+          </div>
 
           <div className="flex gap-4">
             <img
@@ -133,16 +149,23 @@ export function NewsSpotlight() {
               </p>
 
               <p className="text-sm mb-2">
-                <span className="font-semibold text-gray-800">Research Interest: </span>
+                <span className="font-semibold text-gray-800">
+                  Research Interest:{" "}
+                </span>
                 <span className="text-gray-600">Neuroanatomy</span>
               </p>
               <p className="text-sm mb-3">
-                <span className="font-semibold text-gray-800">Recent Achievement: </span>
-                <span className="text-gray-600">Awarded Best Research Presentation at IFAA 2024</span>
+                <span className="font-semibold text-gray-800">
+                  Recent Achievement:{" "}
+                </span>
+                <span className="text-gray-600">
+                  Awarded Best Research Presentation at IFAA 2024
+                </span>
               </p>
 
               <p className="text-sm italic text-gray-500">
-                "Anatomy is the foundation of medicine and the bridge to innovation."
+                "Anatomy is the foundation of medicine and the bridge to
+                innovation."
               </p>
             </div>
           </div>
@@ -154,10 +177,9 @@ export function NewsSpotlight() {
             Read Her Story
           </Link>
         </motion.div>
-
       </div>
     </section>
-  )
+  );
 }
 
 // Reusable news item for Column 2
@@ -182,5 +204,5 @@ function NewsItem({ image, title, excerpt, link }) {
         </Link>
       </div>
     </div>
-  )
+  );
 }

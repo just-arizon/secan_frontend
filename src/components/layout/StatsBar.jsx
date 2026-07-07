@@ -1,4 +1,4 @@
-// src/components/sections/StatsBar.jsx
+
 import { motion } from 'framer-motion'
 import { Users, Building2, CalendarDays, UsersRound, BookOpen, MapPin } from 'lucide-react'
 
