@@ -59,7 +59,7 @@ export function Navbar() {
       ],
     },
     {
-      name: 'Awards & Grants',
+      name: 'Awards & Fellowship',
       subMenu: [
         { name: 'Research Grants', link: '/awards/grants' },
         { name: 'Award Categories', link: '/awards/categories' },

@@ -157,8 +157,7 @@ export function Footer() {
               <div className="flex items-start gap-2">
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
                 <p className="text-white/80">
-                  Department of Anatomy, University of Nigeria, Nsukka, Enugu
-                  State, Nigeria
+                  Department of Anatomy, University of Nnamdi Azikiwe, Awka, Nigeria.
                 </p>
               </div>
               <div className="flex items-center gap-2">
@@ -172,12 +171,20 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={16} />
-                <a
-                  to="tel:+234800000000"
-                  className="text-white/80 hover:text-white transition"
-                >
-                  +234 800 000 0000
-                </a>
+                <div className="grid">
+                    <a
+                      to="tel:+234800000000"
+                      className="text-white/80 hover:text-white transition"
+                    >
+                      +234 8090153777
+                    </a>
+                    <a
+                      to="tel:+234800000000"
+                      className="text-white/80 hover:text-white transition"
+                    >
+                      +234 7030885803
+                    </a>
+                </div>
               </div>
             </div>
           </div>

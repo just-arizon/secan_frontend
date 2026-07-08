@@ -111,9 +111,14 @@ export function FeaturedEventBenefits() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-heading text-xl font-bold text-green-800 mb-5">
-            MEMBERSHIP BENEFITS
-          </h2>
+           <div className="mb-6">
+            <h2 className="text-lg font-bold text-green-700 uppercase">
+              MEMBERSHIP BENEFITS
+            </h2>
+            <div className="w-full bg-gray-200 h-1 rounded relative">
+              <div className="bg-green-700 w-50 h-1 absolute rounded"></div>
+            </div>
+          </div>
 
           <div className="grid grid-cols-2 gap-4">
             {benefits.map((benefit, index) => {
