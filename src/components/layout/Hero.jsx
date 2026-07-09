@@ -1,19 +1,39 @@
 // src/components/sections/Hero.jsx
-import { useState } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { User, CalendarCheck, BookOpen } from 'lucide-react'
+import { User, CalendarCheck, BookOpen, ChevronLeft, ChevronRight } from 'lucide-react'
 import heroImage1 from '@/assets/hero/lab-1.png'
 import heroImage2 from '@/assets/hero/lab-1.png'
 import heroImage3 from '@/assets/hero/lab-1.png'
 
 const slides = [heroImage1, heroImage2, heroImage3]
+const AUTOPLAY_INTERVAL = 5000
 
 export function Hero() {
   const [current, setCurrent] = useState(0)
+  const [isPaused, setIsPaused] = useState(false)
+  const timeoutRef = useRef(null)
+
+  const goTo = useCallback((index) => {
+    setCurrent((index + slides.length) % slides.length)
+  }, [])
+
+  const next = useCallback(() => goTo(current + 1), [current, goTo])
+  const prev = useCallback(() => goTo(current - 1), [current, goTo])
+
+  useEffect(() => {
+    if (isPaused) return
+    timeoutRef.current = setTimeout(next, AUTOPLAY_INTERVAL)
+    return () => clearTimeout(timeoutRef.current)
+  }, [current, isPaused, next])
 
   return (
-    <section className="relative h-[420px] md:h-[480px] overflow-hidden">
+    <section
+      className="relative h-[420px] md:h-[480px] overflow-hidden"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       {/* Background image (carousel) */}
       <AnimatePresence mode="wait">
         <motion.img
@@ -28,7 +48,7 @@ export function Hero() {
         />
       </AnimatePresence>
 
-      {/* Gradient overlay — this is the key part */}
+      {/* Gradient overlay */}
       <div
         className="absolute inset-0"
         style={{
@@ -87,14 +107,30 @@ export function Hero() {
         </div>
       </div>
 
+      {/* Prev / Next arrows */}
+      <button
+        onClick={prev}
+        aria-label="Previous slide"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white/70 hover:text-white transition hidden md:block"
+      >
+        <ChevronLeft size={32} />
+      </button>
+      <button
+        onClick={next}
+        aria-label="Next slide"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white/70 hover:text-white transition hidden md:block"
+      >
+        <ChevronRight size={32} />
+      </button>
+
       {/* Carousel dots */}
       <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 flex gap-2">
         {slides.map((_, index) => (
           <button
             key={index}
-            onClick={() => setCurrent(index)}
-            className={`w-2 h-2 rounded-full transition-all ${
-              current === index ? 'bg-white w-6' : 'bg-white/50'
+            onClick={() => goTo(index)}
+            className={`h-2 rounded-full transition-all ${
+              current === index ? 'bg-white w-6' : 'bg-white/50 w-2'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
