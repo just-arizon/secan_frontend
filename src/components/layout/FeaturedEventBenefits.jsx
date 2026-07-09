@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Calendar, MapPin, Microscope, GraduationCap, Users, Briefcase } from 'lucide-react'
-import conferenceImage from '@/assets/events/conference-2027.png'
+import conferenceImage from '@/assets/events/conference-2027.jpg'
 
 export function FeaturedEventBenefits() {
   const benefits = [

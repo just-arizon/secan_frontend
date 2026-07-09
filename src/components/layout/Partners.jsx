@@ -1,22 +1,14 @@
 import { motion } from "framer-motion";
-import aaaLogo from "@/assets/partners/aaa.png";
 import ifaaLogo from "@/assets/partners/ifaa.png";
-import ibroLogo from "@/assets/partners/ibro.png";
-import tasLogo from "@/assets/partners/tas.png";
-import nuiLogo from "@/assets/partners/nui.png";
-import wfnsLogo from "@/assets/partners/wfns.png";
+
 
 export function Partners() {
   const partners = [
-    { name: "Association of Anatomists of Asia and Oceania", logo: aaaLogo },
     {
       name: "International Federation of Associations of Anatomists",
       logo: ifaaLogo,
     },
-    { name: "IBRO", logo: ibroLogo },
-    { name: "The Anatomical Society", logo: tasLogo },
-    { name: "Nigerian Universities and Institutions", logo: nuiLogo },
-    { name: "World Federation of Neurological Societies", logo: wfnsLogo },
+
   ];
 
   const containerVariants = {
