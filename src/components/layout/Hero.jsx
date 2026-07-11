@@ -4,11 +4,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { User, CalendarCheck, BookOpen, ChevronLeft, ChevronRight } from 'lucide-react'
 import heroImage1 from '@/assets/hero/lab-1.png'
-import heroImage2 from '@/assets/hero/lab-1.png'
-import heroImage3 from '@/assets/hero/lab-1.png'
+import heroImage2 from '@/assets/hero/lab-2.jpeg'
+import heroImage3 from '@/assets/hero/lab-3.jpeg'
 
 const slides = [heroImage1, heroImage2, heroImage3]
-const AUTOPLAY_INTERVAL = 5000
+const AUTOPLAY_INTERVAL = 3000
 
 export function Hero() {
   const [current, setCurrent] = useState(0)
@@ -53,7 +53,7 @@ export function Hero() {
         className="absolute inset-0"
         style={{
           background:
-            'linear-gradient(90deg, rgba(21,87,52,0.95) 0%, rgba(21,87,52,0.85) 50%, rgba(21,87,52,0.4) 60%, rgba(21,87,52,0.05) 100%)',
+            'linear-gradient(90deg, rgba(21,87,52,0.95) 0%, rgba(21,87,52,0.85) 20%, rgba(21,87,52,0.4) 50%, rgba(21,87,52,0.05) 100%)',
         }}
       />
 
