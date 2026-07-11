@@ -1,12 +1,12 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Menu, X, Search } from 'lucide-react'
-import { motion } from 'framer-motion'
-import secanLogo from '@/assets/secan-logo.png'
-import { FacebookIcon } from '@/components/icons/FacebookIcon'
-import { TwitterXIcon } from '@/components/icons/TwitterXIcon'
-import { LinkedInIcon } from '@/components/icons/LinkedInIcon'
-import { YoutubeIcon } from '@/components/icons/YoutubeIcon'
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Menu, X, Search } from "lucide-react";
+import { motion } from "framer-motion";
+import secanLogo from "@/assets/secan-logo.png";
+import { FacebookIcon } from "@/components/icons/FacebookIcon";
+import { TwitterXIcon } from "@/components/icons/TwitterXIcon";
+import { LinkedInIcon } from "@/components/icons/LinkedInIcon";
+import { YoutubeIcon } from "@/components/icons/YoutubeIcon";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,78 +14,76 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/navigation-menu";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
-
+} from "@/components/ui/accordion";
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
     {
-      name: 'About SECAN',
+      name: "About SECAN",
       subMenu: [
-        { name: 'Our Mission', link: '/about/mission' },
-        { name: 'Executive Council', link: '/coming-soon' },
-        { name: 'History', link: '/coming-soon' },
+        { name: "Our Mission", link: "/about/mission" },
+        { name: "Executive Council", link: "/coming-soon" },
+        { name: "History", link: "/coming-soon" },
       ],
     },
     {
-      name: 'Membership',
+      name: "Membership",
       subMenu: [
-        { name: 'Categories', link: '/coming-soon' },
-        { name: 'Apply', link: '/membership/apply' },
+        { name: "Categories", link: "/coming-soon" },
+        { name: "Apply", link: "/membership/apply" },
       ],
     },
     {
-      name: 'Events',
+      name: "Events",
       subMenu: [
-        { name: 'Upcoming Conferences', link: '/events/upcoming' },
-        { name: 'Past Events', link: '/events/past' },
+        { name: "Upcoming Conferences", link: "/events/upcoming" },
+        { name: "Past Events", link: "/events/past" },
       ],
     },
     {
-      name: 'Publications',
+      name: "Publications",
       subMenu: [
-        { name: 'JECA Journal', link: '/publications/jeca' },
-        { name: 'Newsletter', link: '/publications/newsletter' },
-        { name: 'Position Statements', link: '/publications/statements' },
+        { name: "JECA Journal", link: "/publications/jeca" },
+        { name: "Newsletter", link: "/publications/newsletter" },
+        { name: "Position Statements", link: "/publications/statements" },
       ],
     },
     {
-      name: 'Awards & Fellowship',
+      name: "Awards & Fellowship",
       subMenu: [
-        { name: 'Fellowship', link: '/awards/grants' },
-        { name: 'Award Categories', link: '/awards/categories' },
+        { name: "Fellowship", link: "/awards/grants" },
+        { name: "Award Categories", link: "/awards/categories" },
       ],
     },
     {
-      name: 'Resources',
+      name: "Resources",
       subMenu: [
-        { name: 'Member Directory', link: '/coming-soon' },
-        { name: 'FAQ', link: '/coming-soon' },
+        { name: "Member Directory", link: "/coming-soon" },
+        { name: "FAQ", link: "/coming-soon" },
       ],
     },
-    { name: 'Career Center', link: '/career-center' }, // no submenu
-  ]
+    { name: "Career Center", link: "/career-center" }, // no submenu
+  ];
 
-const socialIcons = [
-  { label: 'Facebook', href: '#', icon: FacebookIcon },
-  { label: 'Twitter', href: '#', icon: TwitterXIcon },
-  { label: 'LinkedIn', href: '#', icon: LinkedInIcon },
-  { label: 'YouTube', href: '#', icon: YoutubeIcon },
-]
+  const socialIcons = [
+    { label: "Facebook", href: "#", icon: FacebookIcon },
+    { label: "Twitter", href: "#", icon: TwitterXIcon },
+    { label: "LinkedIn", href: "#", icon: LinkedInIcon },
+    { label: "YouTube", href: "#", icon: YoutubeIcon },
+  ];
   return (
     <>
       {/* Top Bar */}
       <div className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 hidden lg:flex justify-between">
-
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 w-60">
             <img src={secanLogo} alt="SECAN Logo" />
@@ -93,15 +91,30 @@ const socialIcons = [
 
           <div className="flex justify-end items-center gap-5">
             <div className="flex items-center gap-6 text-sm">
-              <a href="#" className="text-green-700 hover:text-primary transition lg:text-xs font-semibold">Member Portal</a>
-              <a href="#" className="text-green-700 hover:text-primary transition lg:text-xs font-semibold">Join SECAN</a>
-              <a href="#" className="text-green-700 hover:text-primary transition lg:text-xs font-semibold">Contact Us</a>
+              <a
+                href="#"
+                className="text-green-700 hover:text-primary transition lg:text-xs font-semibold"
+              >
+                Member Portal
+              </a>
+              <a
+                href="#"
+                className="text-green-700 hover:text-primary transition lg:text-xs font-semibold"
+              >
+                Join SECAN
+              </a>
+              <a
+                href="#"
+                className="text-green-700 hover:text-primary transition lg:text-xs font-semibold"
+              >
+                Contact Us
+              </a>
             </div>
 
             <div className="flex items-center gap-4">
               <div className="flex gap-3">
                 {socialIcons.map((item) => {
-                  const Icon = item.icon
+                  const Icon = item.icon;
                   return (
                     <a
                       key={item.label}
@@ -111,7 +124,7 @@ const socialIcons = [
                     >
                       <Icon size={18} />
                     </a>
-                  )
+                  );
                 })}
               </div>
               <button className="text-green-600 hover:text-primary transition p-1">
@@ -126,13 +139,10 @@ const socialIcons = [
       <nav className="sticky top-0 z-50 bg-white shadow-[0_1px_2px_0_rgb(0,0,0,0.05)] ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex lg:justify-end justify-between items-center py-2 gap-8">
-
-            
-          {/* Logo */}
-          <Link to="/" className="lg:hidden flex items-center gap-2 w-50">
-            <img src={secanLogo} alt="SECAN Logo" />
-          </Link>
-
+            {/* Logo */}
+            <Link to="/" className="lg:hidden flex items-center gap-2 w-50">
+              <img src={secanLogo} alt="SECAN Logo" />
+            </Link>
 
             {/* Desktop Menu — dropdown pattern from El-Neema */}
             <NavigationMenu className="hidden lg:flex justify-start">
@@ -147,7 +157,7 @@ const socialIcons = [
                         <NavigationMenuContent className="p-0 border-none">
                           <ul className="grid gap-1 w-[220px] bg-[#fff] m-0 rounded-md p-2">
                             {item.subMenu.map((subItem, subIndex) => (
-                              <li key={subIndex} className=''>
+                              <li key={subIndex} className="">
                                 <NavigationMenuLink asChild>
                                   <Link
                                     to={subItem.link}
@@ -177,9 +187,11 @@ const socialIcons = [
 
             {/* Right Button - Desktop */}
             <div className="hidden lg:block">
-              <button className="bg-red-400 hover:bg-secondary/90 text-white px-4 py-2 rounded font-semibold
+              <button
+                className="bg-red-400 hover:bg-secondary/90 text-white px-4 py-2 rounded font-semibold
               text-sm
-               transition transform hover:scale-105">
+               transition transform hover:scale-105"
+              >
                 JOIN SECAN
               </button>
             </div>
@@ -234,40 +246,42 @@ const socialIcons = [
                   >
                     {item.name}
                   </Link>
-                )
+                ),
               )}
-              <div className="flex items-center gap-4">
-              <div className="flex gap-3">
-                {socialIcons.map((item) => {
-                  const Icon = item.icon
-                  return (
-                    <a
-                      key={item.label}
-                      href={item.href}
-                      aria-label={item.label}
-                      className="text-gray-600 hover:text-primary transition"
-                    >
-                      <Icon size={18} />
-                    </a>
-                  )
-                })}
+              <div className="flex items-center gap-4 my-3">
+                <div className="flex gap-3">
+                  {socialIcons.map((item) => {
+                    const Icon = item.icon;
+                    return (
+                      <a
+                        key={item.label}
+                        href={item.href}
+                        aria-label={item.label}
+                        className="text-gray-600 hover:text-primary transition"
+                      >
+                        <Icon size={18} />
+                      </a>
+                    );
+                  })}
+                </div>
+                <button className="text-green-600 hover:text-primary transition p-1">
+                  <Search size={18} />
+                </button>
               </div>
-              <button className="text-green-600 hover:text-primary transition p-1">
-                <Search size={18} />
-              </button>
-            </div>
-            
-               <div className="">
-              <button className="bg-red-400 hover:bg-secondary/90 text-white px-4 py-2 rounded font-semibold
+
+              <div className="my-3 w-full">
+                <button
+                  className="bg-red-400 hover:bg-secondary/90 text-white px-4 py-2 rounded font-semibold
               text-sm
-               transition transform hover:scale-105">
-                JOIN SECAN
-              </button>
-            </div>
+               transition transform hover:scale-105 w-full"
+                >
+                  JOIN SECAN
+                </button>
+              </div>
             </motion.div>
           )}
         </div>
       </nav>
     </>
-  )
+  );
 }
