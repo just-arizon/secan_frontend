@@ -31,14 +31,13 @@ export function Navbar() {
       name: 'About SECAN',
       subMenu: [
         { name: 'Our Mission', link: '/about/mission' },
-        { name: 'Executive Council', link: '/about/council' },
-        { name: 'History', link: '/about/history' },
+        { name: 'Executive Council', link: '/coming-soon' },
+        { name: 'History', link: '/coming-soon' },
       ],
     },
     {
       name: 'Membership',
       subMenu: [
-        { name: 'Benefits', link: '/membership/benefits' },
         { name: 'Categories', link: '/membership/categories' },
         { name: 'Apply', link: '/membership/apply' },
       ],
