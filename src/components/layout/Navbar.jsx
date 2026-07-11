@@ -38,7 +38,7 @@ export function Navbar() {
     {
       name: 'Membership',
       subMenu: [
-        { name: 'Categories', link: '/membership/categories' },
+        { name: 'Categories', link: '/coming-soon' },
         { name: 'Apply', link: '/membership/apply' },
       ],
     },
@@ -60,15 +60,15 @@ export function Navbar() {
     {
       name: 'Awards & Fellowship',
       subMenu: [
-        { name: 'Research Grants', link: '/awards/grants' },
+        { name: 'Fellowship', link: '/awards/grants' },
         { name: 'Award Categories', link: '/awards/categories' },
       ],
     },
     {
       name: 'Resources',
       subMenu: [
-        { name: 'Member Directory', link: '/resources/directory' },
-        { name: 'FAQ', link: '/resources/faq' },
+        { name: 'Member Directory', link: '/coming-soon' },
+        { name: 'FAQ', link: '/coming-soon' },
       ],
     },
     { name: 'Career Center', link: '/career-center' }, // no submenu
@@ -236,9 +236,34 @@ const socialIcons = [
                   </Link>
                 )
               )}
-              <button className="w-full mt-4 bg-secondary hover:bg-secondary/90 text-white px-6 py-2 rounded font-semibold transition">
+              <div className="flex items-center gap-4">
+              <div className="flex gap-3">
+                {socialIcons.map((item) => {
+                  const Icon = item.icon
+                  return (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      aria-label={item.label}
+                      className="text-gray-600 hover:text-primary transition"
+                    >
+                      <Icon size={18} />
+                    </a>
+                  )
+                })}
+              </div>
+              <button className="text-green-600 hover:text-primary transition p-1">
+                <Search size={18} />
+              </button>
+            </div>
+            
+               <div className="">
+              <button className="bg-red-400 hover:bg-secondary/90 text-white px-4 py-2 rounded font-semibold
+              text-sm
+               transition transform hover:scale-105">
                 JOIN SECAN
               </button>
+            </div>
             </motion.div>
           )}
         </div>

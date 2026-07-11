@@ -8,7 +8,7 @@ import heroImage2 from '@/assets/hero/lab-2.jpeg'
 import heroImage3 from '@/assets/hero/lab-3.jpeg'
 
 const slides = [heroImage1, heroImage2, heroImage3]
-const AUTOPLAY_INTERVAL = 4000
+const AUTOPLAY_INTERVAL = 3500
 
 export function Hero() {
   const [current, setCurrent] = useState(0)
