@@ -29,7 +29,7 @@ export function Navbar() {
     {
       name: "About SECAN",
       subMenu: [
-        { name: "Our Mission", link: "/about/mission" },
+        { name: "Our Mission", link: "/about" },
         { name: "Executive Council", link: "/coming-soon" },
         { name: "History", link: "/coming-soon" },
       ],
@@ -75,7 +75,7 @@ export function Navbar() {
 
   const socialIcons = [
     { label: "Facebook", href: "#", icon: FacebookIcon },
-    { label: "Twitter", href: "#", icon: TwitterXIcon },
+    { label: "Twitter", href: "https://x.com/SECAN_NG", icon: TwitterXIcon },
     { label: "LinkedIn", href: "#", icon: LinkedInIcon },
     { label: "YouTube", href: "#", icon: YoutubeIcon },
   ];
