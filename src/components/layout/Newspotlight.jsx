@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import jecaCover from "@/assets/jeca-cover.png";
-import newsWebinar from "@/assets/news/webinar.png";
+import newsWebinar from "@/assets/news/webinar.jpeg";
 import newsAwards from "@/assets/news/awards.png";
 import newsConference from "@/assets/news/conference.png";
 import memberPhoto from "@/assets/chioma-okafor.png";
@@ -91,7 +91,7 @@ export function NewsSpotlight() {
           <div className="flex flex-col gap-5">
             <NewsItem
               image={newsWebinar}
-              title="SECAN Webinar Series Launches"
+              title=" SECAN 2027 Conference will be hosted by the Federal University, Lafia"
               excerpt="Interactive sessions for members and students."
               link="/news/webinar-series"
             />
