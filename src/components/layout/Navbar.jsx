@@ -45,7 +45,7 @@ export function Navbar() {
       name: "Events",
       subMenu: [
         { name: "Upcoming Conferences", link: "/events" },
-        { name: "Past Events", link: "/events/past" },
+        { name: "Past Events", link: "/coming-soon" },
       ],
     },
     {
@@ -70,13 +70,13 @@ export function Navbar() {
         { name: "FAQ", link: "/coming-soon" },
       ],
     },
-    { name: "Career Center", link: "/career-center" }, // no submenu
+    { name: "Career Center", link: "/coming-soon" }, // no submenu
   ];
 
   const socialIcons = [
-    { label: "Facebook", href: "#", icon: FacebookIcon },
+    { label: "Facebook", href: "https://www.facebook.com/share/1CN4JuvLoS/", icon: FacebookIcon },
     { label: "Twitter", href: "https://x.com/SECAN_NG", icon: TwitterXIcon },
-    { label: "LinkedIn", href: "#", icon: LinkedInIcon },
+    { label: "LinkedIn", href: "https://www.linkedin.com/company/secanig?fbclid=IwVERDUARG9N1leHRuA2FlbQIxMABzcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR6Cff4vexj5b3_rdD9qmKr-mwPgZS6-mGWcV7Rs1flf539gmFtwnZQMMTCUJw_aem_3HzIRyA84es9xpLPsM9_Kg", icon: LinkedInIcon },
     { label: "YouTube", href: "#", icon: YoutubeIcon },
   ];
   return (
@@ -92,19 +92,19 @@ export function Navbar() {
           <div className="flex justify-end items-center gap-5">
             <div className="flex items-center gap-6 text-sm">
               <a
-                href="#"
+                href="/coming-soon"
                 className="text-green-700 hover:text-primary transition lg:text-xs font-semibold"
               >
                 Member Portal
               </a>
               <a
-                href="#"
+                href="/coming-soon"
                 className="text-green-700 hover:text-primary transition lg:text-xs font-semibold"
               >
                 Join SECAN
               </a>
               <a
-                href="#"
+                href="/coming-soon"
                 className="text-green-700 hover:text-primary transition lg:text-xs font-semibold"
               >
                 Contact Us
@@ -127,9 +127,9 @@ export function Navbar() {
                   );
                 })}
               </div>
-              <button className="text-green-600 hover:text-primary transition p-1">
+              {/* <button className="text-green-600 hover:text-primary transition p-1">
                 <Search size={18} />
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
@@ -264,9 +264,9 @@ export function Navbar() {
                     );
                   })}
                 </div>
-                <button className="text-green-600 hover:text-primary transition p-1">
+                {/* <button className="text-green-600 hover:text-primary transition p-1">
                   <Search size={18} />
-                </button>
+                </button> */}
               </div>
 
               <div className="my-3 w-full">

@@ -93,19 +93,19 @@ export function NewsSpotlight() {
               image={newsWebinar}
               title=" SECAN 2027 Conference will be hosted by the Federal University, Lafia"
               excerpt="Interactive sessions for members and students."
-              link="/news/webinar-series"
+              link="/coming-soon"
             />
             <NewsItem
               image={newsAwards}
               title="Members Receive International Awards"
               excerpt="SECAN members recognised for excellence in research."
-              link="/news/international-awards"
+              link="/coming-soon"
             />
             <NewsItem
               image={newsConference}
               title="SECAN 2027 Conference Registration Opens"
               excerpt="Early bird registration now open."
-              link="/news/conference-registration"
+              link="/coming-soon"
             />
           </div>
 
