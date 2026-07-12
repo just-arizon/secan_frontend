@@ -16,7 +16,7 @@ export default function AboutUs() {
       {/* Page Banner */}
       <motion.div className="relative">
         <div
-          className="grid-layout bg-cover bg-center lg:w-full w-full h-80"
+          className="grid-layout bg-cover bg-center lg:w-full w-full h-50"
           style={{
             backgroundImage: `
               linear-gradient(to bottom right, rgba(0, 0, 0, .3), rgba(21,87,52, 0.3) 80%),
@@ -122,7 +122,7 @@ export default function AboutUs() {
               Nigeria on the global anatomical sciences stage.
             </p>
             <Link
-              to="/about/council"
+              to="/coming-soon"
               className="inline-block bg-green-700 hover:bg-green-800 text-white text-sm font-semibold px-5 py-2.5 rounded transition"
             >
               Meet the Council
@@ -148,7 +148,7 @@ export default function AboutUs() {
               advancing anatomical sciences.
             </p>
             <Link
-              to="/membership/apply"
+              to="/coming-soon"
               className="inline-block bg-red-500 hover:bg-red-600 text-white text-sm font-semibold px-6 py-3 rounded transition"
             >
               Become a Member

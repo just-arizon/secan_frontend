@@ -3,6 +3,8 @@ import App from './App'
 import Home from './pages/Home'
 import ComingSoon from './pages/ComingSoon'
 import About from './pages/AboutUs'
+import Awards from './pages/Awards'
+import Fellowship from './pages/Fellowship'
 
 export const router = createBrowserRouter([
   {
@@ -12,6 +14,8 @@ export const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: 'coming-soon', element: <ComingSoon /> },
       { path: 'about', element: <About /> },
+      { path: 'awards', element: <Awards /> },
+      { path: 'fellowship', element: <Fellowship /> },
     ],
   },
 ])
