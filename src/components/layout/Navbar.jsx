@@ -66,11 +66,11 @@ export function Navbar() {
     {
       name: "Resources",
       subMenu: [
-        { name: "Member Directory", link: "/coming-soon" },
-        { name: "FAQ", link: "/coming-soon" },
+        { name: "Member Directory", link: "/resources/member-directory" },
+        { name: "FAQ", link: "/resources/faq" },
       ],
     },
-    { name: "Career Center", link: "/coming-soon" }, // no submenu
+    { name: "Career Center", link: "/career-center" }, // no submenu
   ];
 
   const socialIcons = [

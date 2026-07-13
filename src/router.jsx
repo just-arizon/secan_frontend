@@ -11,6 +11,7 @@ import FellowshipAwards from "./pages/FellowshipAwards";
 import Upcoming, { eventsLoader }  from "./pages/events/Upcoming";
 import Fellowship from "./pages/awards-and-fellowship/Fellowship";
 import Awards from "./pages/awards-and-fellowship/Awards";
+import Resources from "./pages/Resources";
 
 
 export const router = createBrowserRouter([
@@ -67,6 +68,19 @@ export const router = createBrowserRouter([
           { path: "awards", element: <Awards /> },
 
         ],
+      },
+        {
+        path: "resources",
+        element: <Resources />,
+        children: [
+          { path: "member-directory", element: <ComingSoon /> },
+          { path: "faq", element: <ComingSoon /> },
+
+        ],
+      },
+        {
+        path: "career-center",
+        element: <ComingSoon />,
       },
 
     ],
