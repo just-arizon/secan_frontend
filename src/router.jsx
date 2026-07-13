@@ -3,13 +3,15 @@ import App from "./App";
 import Home from "./pages/Home";
 import ComingSoon from "./pages/ComingSoon";
 import About from "./pages/AboutUs";
-import Awards from "./pages/Awards";
-import Fellowship from "./pages/Fellowship";
 import Events from "./pages/Events";
 import Mission from "./pages/about/Mission";
 import Membership from "./pages/Membership";
 import Publications from "./pages/Publications";
+import FellowshipAwards from "./pages/FellowshipAwards";
 import Upcoming, { eventsLoader }  from "./pages/events/Upcoming";
+import Fellowship from "./pages/awards-and-fellowship/Fellowship";
+import Awards from "./pages/awards-and-fellowship/Awards";
+
 
 export const router = createBrowserRouter([
   {
@@ -39,10 +41,6 @@ export const router = createBrowserRouter([
         ],
       },
 
-      { path: "awards", element: <Awards /> },
-      { path: "fellowship", element: <Fellowship /> },
-
-
        {
         path: "events",
         element: <Events />,
@@ -58,6 +56,16 @@ export const router = createBrowserRouter([
           { path: "jeca-journal", element: <ComingSoon /> },
           { path: "newsletter", element: <ComingSoon /> },
           { path: "position-statements", element: <ComingSoon /> },
+        ],
+      },
+
+        {
+        path: "fellowship-and-awards",
+        element: <FellowshipAwards />,
+        children: [
+          { path: "fellowship", element: <Fellowship /> },
+          { path: "awards", element: <Awards /> },
+
         ],
       },
 

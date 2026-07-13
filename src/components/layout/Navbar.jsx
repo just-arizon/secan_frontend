@@ -59,8 +59,8 @@ export function Navbar() {
     {
       name: "Awards & Fellowship",
       subMenu: [
-        { name: "Fellowship", link: "/fellowship" },
-        { name: "Award Categories", link: "/awards" },
+        { name: "Fellowship", link: "fellowship-and-awards/fellowship" },
+        { name: "Award Categories", link: "fellowship-and-awards/awards" },
       ],
     },
     {
