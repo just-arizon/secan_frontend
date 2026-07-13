@@ -8,6 +8,7 @@ import Fellowship from "./pages/Fellowship";
 import Events from "./pages/Events";
 import Mission from "./pages/about/Mission";
 import Membership from "./pages/Membership";
+import Publications from "./pages/Publications";
 import Upcoming, { eventsLoader }  from "./pages/events/Upcoming";
 
 export const router = createBrowserRouter([
@@ -50,6 +51,16 @@ export const router = createBrowserRouter([
           { path: "past-events", element: <ComingSoon /> },
         ],
       },
+        {
+        path: "publication",
+        element: <Publications />,
+        children: [
+          { path: "jeca-journal", element: <ComingSoon /> },
+          { path: "newsletter", element: <ComingSoon /> },
+          { path: "position-statements", element: <ComingSoon /> },
+        ],
+      },
+
     ],
   },
 ]);

@@ -51,9 +51,9 @@ export function Navbar() {
     {
       name: "Publications",
       subMenu: [
-        { name: "JECA Journal", link: "/coming-soon" },
-        { name: "Newsletter", link: "/coming-soon" },
-        { name: "Position Statements", link: "/coming-soon" },
+        { name: "JECA Journal", link: "/publication/jeca-journal" },
+        { name: "Newsletter", link: "/publication/newsletter" },
+        { name: "Position Statements", link: "/publication/position-statements" },
       ],
     },
     {
