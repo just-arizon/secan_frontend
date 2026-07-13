@@ -44,8 +44,8 @@ export function Navbar() {
     {
       name: "Events",
       subMenu: [
-        { name: "Upcoming Conferences", link: "/events" },
-        { name: "Past Events", link: "/coming-soon" },
+        { name: "Upcoming Conferences", link: "/events/upcoming-events" },
+        { name: "Past Events", link: "/events/past-events" },
       ],
     },
     {

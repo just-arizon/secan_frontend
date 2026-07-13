@@ -5,9 +5,10 @@ import ComingSoon from "./pages/ComingSoon";
 import About from "./pages/AboutUs";
 import Awards from "./pages/Awards";
 import Fellowship from "./pages/Fellowship";
-import Events, { eventsLoader } from "./pages/Events";
+import Events from "./pages/Events";
 import Mission from "./pages/about/Mission";
 import Membership from "./pages/Membership";
+import Upcoming, { eventsLoader }  from "./pages/events/Upcoming";
 
 export const router = createBrowserRouter([
   {
@@ -39,7 +40,16 @@ export const router = createBrowserRouter([
 
       { path: "awards", element: <Awards /> },
       { path: "fellowship", element: <Fellowship /> },
-      { path: "events", element: <Events />, loader: eventsLoader },
+
+
+       {
+        path: "events",
+        element: <Events />,
+        children: [
+          { path: "upcoming-events", element: <Upcoming />, loader: eventsLoader  },
+          { path: "past-events", element: <ComingSoon /> },
+        ],
+      },
     ],
   },
 ]);
