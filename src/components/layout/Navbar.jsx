@@ -29,15 +29,15 @@ export function Navbar() {
     {
       name: "About SECAN",
       subMenu: [
-        { name: "Our Mission", link: "/about" },
-        { name: "Executive Council", link: "/coming-soon" },
-        { name: "History", link: "/coming-soon" },
+        { name: "Our Mission", link: "/about/our-mission" },
+        { name: "Executive Council", link: "/about/executive-council" },
+        { name: "History", link: "/about/history" },
       ],
     },
     {
       name: "Membership",
       subMenu: [
-        { name: "Categories", link: "/coming-soon" },
+        { name: "Categories", link: "/membership/categories" },
         { name: "Apply", link: "/membership/apply" },
       ],
     },
@@ -51,9 +51,9 @@ export function Navbar() {
     {
       name: "Publications",
       subMenu: [
-        { name: "JECA Journal", link: "/publications/jeca" },
-        { name: "Newsletter", link: "/publications/newsletter" },
-        { name: "Position Statements", link: "/publications/statements" },
+        { name: "JECA Journal", link: "/coming-soon" },
+        { name: "Newsletter", link: "/coming-soon" },
+        { name: "Position Statements", link: "/coming-soon" },
       ],
     },
     {
@@ -188,7 +188,7 @@ export function Navbar() {
             {/* Right Button - Desktop */}
             <div className="hidden lg:block">
               <button
-                className="bg-red-400 hover:bg-secondary/90 text-white px-4 py-2 rounded font-semibold
+                className="bg-red-400 hover:bg-secondary/90 text-white px-4 py-2 rounded-full font-semibold
               text-sm
                transition transform hover:scale-105"
               >
@@ -271,7 +271,7 @@ export function Navbar() {
 
               <div className="my-3 w-full">
                 <button
-                  className="bg-red-400 hover:bg-secondary/90 text-white px-4 py-2 rounded font-semibold
+                  className="bg-red-400 hover:bg-secondary/90 text-white px-4 py-2 rounded-full font-semibold
               text-sm
                transition transform hover:scale-105 w-full"
                 >

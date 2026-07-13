@@ -86,19 +86,19 @@ export function Hero() {
             className="flex flex-wrap gap-3"
           >
             <Link
-              to="/membership/apply"
+              to="/coming-soon"
               className="flex items-center gap-2 border border-white text-white text-sm font-semibold px-4 py-2.5 rounded hover:bg-white/10 transition"
             >
               <User size={16} /> Become a Member
             </Link>
             <Link
-              to="/events/conference"
+              to="/coming-soon"
               className="flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white text-sm font-semibold px-4 py-2.5 rounded transition"
             >
               <CalendarCheck size={16} /> Register for Conference
             </Link>
             <Link
-              to="/publications/jeca"
+              to="/coming-soon"
               className="flex items-center gap-2 border border-white text-white text-sm font-semibold px-4 py-2.5 rounded hover:bg-white/10 transition"
             >
               <BookOpen size={16} /> Explore JECA
