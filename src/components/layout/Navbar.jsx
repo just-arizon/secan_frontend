@@ -70,6 +70,7 @@ export function Navbar() {
         { name: "FAQ", link: "/resources/faq" },
       ],
     },
+    
     { name: "Career Center", link: "/career-center" }, // no submenu
   ];
 
