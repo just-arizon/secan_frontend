@@ -157,7 +157,7 @@ export function Footer() {
               <div className="flex items-start gap-2">
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
                 <p className="text-white/80">
-                  Department of Anatomy, University of Nnamdi Azikiwe, Awka, Nigeria.
+                  Department of Anatomy, Nnamdi Azikiwe University, Awka, Nigeria.
                 </p>
               </div>
               <div className="flex items-center gap-2">

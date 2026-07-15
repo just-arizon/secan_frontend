@@ -12,6 +12,7 @@ import Upcoming, { eventsLoader }  from "./pages/events/Upcoming";
 import Fellowship from "./pages/awards-and-fellowship/Fellowship";
 import Awards from "./pages/awards-and-fellowship/Awards";
 import Resources from "./pages/Resources";
+import ExecutiveCouncil from "./pages/about/ExecutiveCouncil";
 
 
 export const router = createBrowserRouter([
@@ -27,7 +28,7 @@ export const router = createBrowserRouter([
         path: "about",
         element: <About />,
         children: [
-          { path: "executive-council", element: <ComingSoon /> },
+          { path: "executive-council", element: <ExecutiveCouncil /> },
           { path: "history", element: <ComingSoon /> },
           { path: "our-mission", element: <Mission /> },
         ],

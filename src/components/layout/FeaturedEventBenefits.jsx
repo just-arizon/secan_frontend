@@ -72,12 +72,12 @@ export function FeaturedEventBenefits() {
 
             <div className="flex flex-col gap-1 text-white/90 text-sm mb-5">
               <div className="flex items-center gap-2">
-                <Calendar size={16} />
-                <span>19th – 22nd August, 2027</span>
+                {/* <Calendar size={16} /> */}
+                {/* <span>19th – 22nd August, 2027</span> */}
               </div>
               <div className="flex items-center gap-2">
                 <MapPin size={16} />
-                <span>University of Nigeria, Nsukka, Enugu State.</span>
+                <span className='font-bold'>Federal University of Lafia, Nasarawa State, Nigeria</span>
               </div>
             </div>
 

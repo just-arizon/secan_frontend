@@ -91,15 +91,15 @@ export function Hero() {
             >
               <User size={16} /> Become a Member
             </Link>
-            <Link
+            {/* <Link
               to="/coming-soon"
               className="flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white text-sm font-semibold px-4 py-2.5 rounded transition"
             >
               <CalendarCheck size={16} /> Register for Conference
-            </Link>
+            </Link> */}
             <Link
               to="/coming-soon"
-              className="flex items-center gap-2 border border-white text-white text-sm font-semibold px-4 py-2.5 rounded hover:bg-white/10 transition"
+              className="flex items-center gap-2 border bg-red-500 hover:bg-red-600 text-white text-sm font-semibold px-4 py-2.5 rounded transition"
             >
               <BookOpen size={16} /> Explore JECA
             </Link>
