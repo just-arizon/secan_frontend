@@ -19,8 +19,8 @@ import NewsList from "./pages/news/NewsList";
 import MemberSpotlight, {
   memberSpotlightLoader,
 } from "./pages/members/MemberSpotlight";
-import Apply from "./pages/membership/Apply";
-import Categories from "./pages/membership/Categories";
+import Apply from "@/pages/membership/Apply";
+import Categories from "@/pages/membership/Categories";
 
 export const router = createBrowserRouter([
   {
