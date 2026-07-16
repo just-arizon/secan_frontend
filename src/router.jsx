@@ -19,6 +19,8 @@ import NewsList from "./pages/news/NewsList";
 import MemberSpotlight, {
   memberSpotlightLoader,
 } from "./pages/members/MemberSpotlight";
+import Apply from "./pages/membership/Apply";
+import Categories from "./pages/membership/Categories";
 
 export const router = createBrowserRouter([
   {
@@ -44,8 +46,8 @@ export const router = createBrowserRouter([
         path: "membership",
         element: <Membership />,
         children: [
-          { path: "categories", element: <ComingSoon /> },
-          { path: "apply", element: <ComingSoon /> },
+          { path: "categories", element: <Categories /> },
+          { path: "apply", element: <Apply /> },
         ],
       },
       {
