@@ -5,7 +5,6 @@ import { Footer } from '@/components/layout/Footer'
 export default function NotFound() {
   return (
     <div>
-      <Navbar />
       <div className="max-w-md mx-auto text-center py-24 px-4">
         <p className="text-5xl font-bold text-green-700 mb-3">404</p>
         <h1 className="text-lg font-semibold text-gray-900 mb-2">Page not found</h1>
@@ -19,7 +18,6 @@ export default function NotFound() {
           Back to home
         </Link>
       </div>
-      <Footer />
     </div>
   )
 }
