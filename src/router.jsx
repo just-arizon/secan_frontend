@@ -8,12 +8,15 @@ import Mission from "./pages/about/Mission";
 import Membership from "./pages/Membership";
 import Publications from "./pages/Publications";
 import FellowshipAwards from "./pages/FellowshipAwards";
-import Upcoming, { eventsLoader }  from "./pages/events/Upcoming";
+import Upcoming, { eventsLoader } from "./pages/events/Upcoming";
 import Fellowship from "./pages/awards-and-fellowship/Fellowship";
 import Awards from "./pages/awards-and-fellowship/Awards";
 import Resources from "./pages/Resources";
 import ExecutiveCouncil from "./pages/about/ExecutiveCouncil";
-
+import NewsArticle, { newsArticleLoader } from "./pages/news/NewsArticle";
+import NotFound from './pages/NotFound'
+import NewsList from './pages/news/NewsList'
+import ErrorPage from './pages/ErrorPage'
 
 export const router = createBrowserRouter([
   {
@@ -43,15 +46,19 @@ export const router = createBrowserRouter([
         ],
       },
 
-       {
+      {
         path: "events",
         element: <Events />,
         children: [
-          { path: "upcoming-events", element: <Upcoming />, loader: eventsLoader  },
+          {
+            path: "upcoming-events",
+            element: <Upcoming />,
+            loader: eventsLoader,
+          },
           { path: "past-events", element: <ComingSoon /> },
         ],
       },
-        {
+      {
         path: "publication",
         element: <Publications />,
         children: [
@@ -61,29 +68,38 @@ export const router = createBrowserRouter([
         ],
       },
 
-        {
+      {
         path: "fellowship-and-awards",
         element: <FellowshipAwards />,
         children: [
           { path: "fellowship", element: <Fellowship /> },
           { path: "awards", element: <Awards /> },
-
         ],
       },
-        {
+      {
         path: "resources",
         element: <Resources />,
         children: [
           { path: "member-directory", element: <ComingSoon /> },
           { path: "faq", element: <ComingSoon /> },
-
         ],
       },
-        {
+      {
         path: "career-center",
         element: <ComingSoon />,
       },
-
+      { path: 'news', element: <NewsList /> },
+{ path: 'news/:slug', element: <NewsArticle />, loader: newsArticleLoader },
+ {
+    path: "/",
+    element: <App />,
+    errorElement: <NotFound />, // ← add this one line
+    children: [
+      { index: true, element: <Home /> },
+      { path: "coming-soon", element: <ComingSoon /> },
+      // ...keep every other route exactly as you already have it
+    ],
+  },
     ],
   },
 ]);

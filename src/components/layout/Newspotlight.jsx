@@ -93,7 +93,7 @@ export function NewsSpotlight() {
               image={newsWebinar}
               title=" SECAN 2027 Conference will be hosted by the Federal University, Lafia"
               excerpt="Interactive sessions for members and students."
-              link="/coming-soon"
+              link="/news/esom-244th-inaugural-lecture"
             />
             <NewsItem
               image={newsAwards}
