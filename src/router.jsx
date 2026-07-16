@@ -14,8 +14,11 @@ import Awards from "./pages/awards-and-fellowship/Awards";
 import Resources from "./pages/Resources";
 import ExecutiveCouncil from "./pages/about/ExecutiveCouncil";
 import NewsArticle, { newsArticleLoader } from "./pages/news/NewsArticle";
-import NotFound from './pages/NotFound'
-import NewsList from './pages/news/NewsList'
+import NotFound from "./pages/NotFound";
+import NewsList from "./pages/news/NewsList";
+import MemberSpotlight, {
+  memberSpotlightLoader,
+} from "./pages/members/MemberSpotlight";
 
 export const router = createBrowserRouter([
   {
@@ -44,6 +47,11 @@ export const router = createBrowserRouter([
           { path: "categories", element: <ComingSoon /> },
           { path: "apply", element: <ComingSoon /> },
         ],
+      },
+      {
+        path: "members/:slug",
+        element: <MemberSpotlight />,
+        loader: memberSpotlightLoader,
       },
 
       {
@@ -89,7 +97,11 @@ export const router = createBrowserRouter([
         element: <ComingSoon />,
       },
       { path: "news", element: <NewsList /> },
-      { path: "news/:slug", element: <NewsArticle />, loader: newsArticleLoader },
+      {
+        path: "news/:slug",
+        element: <NewsArticle />,
+        loader: newsArticleLoader,
+      },
     ],
   },
 ]);

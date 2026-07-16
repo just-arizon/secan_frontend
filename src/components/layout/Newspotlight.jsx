@@ -5,7 +5,9 @@ import jecaCover from "@/assets/jeca-cover.png";
 import newsWebinar from "@/assets/news/webinar.jpeg";
 import newsAwards from "@/assets/news/awards.png";
 import newsConference from "@/assets/news/conference.png";
-import memberPhoto from "@/assets/chioma-okafor.png";
+
+
+import { memberSpotlights } from '@/data/memberSpotlight'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -23,12 +25,10 @@ export function NewsSpotlight() {
           viewport={{ once: true }}
           variants={fadeUp}
         >
-
-
-            <div className="mb-6">
-                     <h2 className="text-lg font-bold text-green-700 uppercase">
-            JECA Spotlight
-          </h2>
+          <div className="mb-6">
+            <h2 className="text-lg font-bold text-green-700 uppercase">
+              JECA Spotlight
+            </h2>
             <div className="w-full bg-gray-200 h-1 rounded relative">
               <div className="bg-green-700 w-35 h-1 absolute rounded"></div>
             </div>
@@ -71,7 +71,6 @@ export function NewsSpotlight() {
             </div>
           </div>
         </motion.div>
-
         {/* Column 2: Latest News */}
         <motion.div
           initial="hidden"
@@ -134,48 +133,56 @@ export function NewsSpotlight() {
             </div>
           </div>
 
-          <div className="flex gap-4">
-            <img
-              src={memberPhoto}
-              alt="Dr. Chioma E. Okafor"
-              className="w-24 h-full rounded-lg object-cover flex-shrink-0"
-            />
-            <div>
-              <h3 className="font-bold text-green-800 text-base">
-                Dr. Chioma E. Okafor
-              </h3>
-              <p className="text-xs text-gray-500 mb-3">
-                University of Nigeria, Nsukka
-              </p>
+          {(() => {
+            const featured = memberSpotlights[0];
+            return (
+              <>
+                <div className="flex gap-4">
+                  <img
+                    src={featured.photo}
+                    alt={featured.name}
+                    className="w-24 h-full rounded-lg object-cover flex-shrink-0"
+                  />
+                  <div>
+                    <h3 className="font-bold text-green-800 text-base">
+                      {featured.name}
+                    </h3>
+                    <p className="text-xs text-gray-500 mb-3">
+                      {featured.institution}
+                    </p>
 
-              <p className="text-sm mb-2">
-                <span className="font-semibold text-gray-800">
-                  Research Interest:{" "}
-                </span>
-                <span className="text-gray-600">Neuroanatomy</span>
-              </p>
-              <p className="text-sm mb-3">
-                <span className="font-semibold text-gray-800">
-                  Recent Achievement:{" "}
-                </span>
-                <span className="text-gray-600">
-                  Awarded Best Research Presentation at IFAA 2024
-                </span>
-              </p>
+                    <p className="text-sm mb-2">
+                      <span className="font-semibold text-gray-800">
+                        Research Interest:{" "}
+                      </span>
+                      <span className="text-gray-600">
+                        {featured.researchInterests.join(", ")}
+                      </span>
+                    </p>
+                    <p className="text-sm mb-3">
+                      <span className="font-semibold text-gray-800">
+                        Recent Achievement:{" "}
+                      </span>
+                      <span className="text-gray-600">
+                        {featured.recentAchievement}
+                      </span>
+                    </p>
 
-              <p className="text-sm italic text-gray-500">
-                "Anatomy is the foundation of medicine and the bridge to
-                innovation."
-              </p>
-            </div>
-          </div>
+                    <p className="text-sm italic text-gray-500">
+                      "{featured.quote}"
+                    </p>
+                  </div>
+                </div>
 
-          <Link
-            to="/members/chioma-okafor"
-            className="block mt-5 bg-green-700 hover:bg-green-800 text-white text-sm font-semibold text-center py-2 rounded transition"
-          >
-            Read Her Story
-          </Link>
+                <Link
+                  to={`/members/${featured.slug}`}
+                  className="block mt-5 bg-green-700 hover:bg-green-800 text-white text-sm font-semibold text-center py-2 rounded transition"
+                >
+                  Read His Story
+                </Link>
+              </>
+            );
+          })()}
         </motion.div>
       </div>
     </section>
