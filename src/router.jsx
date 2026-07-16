@@ -16,12 +16,12 @@ import ExecutiveCouncil from "./pages/about/ExecutiveCouncil";
 import NewsArticle, { newsArticleLoader } from "./pages/news/NewsArticle";
 import NotFound from './pages/NotFound'
 import NewsList from './pages/news/NewsList'
-import ErrorPage from './pages/ErrorPage'
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <NotFound />,
     children: [
       { index: true, element: <Home /> },
 
@@ -88,18 +88,8 @@ export const router = createBrowserRouter([
         path: "career-center",
         element: <ComingSoon />,
       },
-      { path: 'news', element: <NewsList /> },
-{ path: 'news/:slug', element: <NewsArticle />, loader: newsArticleLoader },
- {
-    path: "/",
-    element: <App />,
-    errorElement: <NotFound />, // ← add this one line
-    children: [
-      { index: true, element: <Home /> },
-      { path: "coming-soon", element: <ComingSoon /> },
-      // ...keep every other route exactly as you already have it
-    ],
-  },
+      { path: "news", element: <NewsList /> },
+      { path: "news/:slug", element: <NewsArticle />, loader: newsArticleLoader },
     ],
   },
 ]);

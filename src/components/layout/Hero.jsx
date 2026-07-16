@@ -99,7 +99,7 @@ export function Hero() {
             </Link> */}
             <Link
               to="/coming-soon"
-              className="flex items-center gap-2 border bg-red-500 hover:bg-red-600 text-white text-sm font-semibold px-4 py-2.5 rounded transition"
+              className="flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white text-sm font-semibold px-4 py-2.5 rounded transition"
             >
               <BookOpen size={16} /> Explore JECA
             </Link>
@@ -108,7 +108,7 @@ export function Hero() {
       </div>
 
       {/* Prev / Next arrows */}
-      <button
+      {/* <button
         onClick={prev}
         aria-label="Previous slide"
         className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white/70 hover:text-white transition hidden md:block"
@@ -121,7 +121,7 @@ export function Hero() {
         className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white/70 hover:text-white transition hidden md:block"
       >
         <ChevronRight size={32} />
-      </button>
+      </button> */}
 
       {/* Carousel dots */}
       <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 flex gap-2">

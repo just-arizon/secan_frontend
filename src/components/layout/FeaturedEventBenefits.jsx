@@ -66,9 +66,9 @@ export function FeaturedEventBenefits() {
               SECAN Annual Scientific Conference 2027
             </h2>
 
-            <p className="text-yellow-400 text-sm font-medium mb-4">
+            {/* <p className="text-yellow-400 text-sm font-medium mb-4">
               Theme: Advancing Anatomy for Health, Innovation and Sustainable Development
-            </p>
+            </p> */}
 
             <div className="flex flex-col gap-1 text-white/90 text-sm mb-5">
               <div className="flex items-center gap-2">

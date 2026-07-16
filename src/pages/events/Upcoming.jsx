@@ -35,9 +35,9 @@ export default function Upcoming() {
                 <h3 className="text-sm font-semibold mb-2">{event.title}</h3>
 
                 <div className="text-xs text-gray-500 space-y-1 mb-3">
-                  <p className="flex items-center gap-1.5">
+                  {/* <p className="flex items-center gap-1.5">
                     <Calendar size={12} /> {event.date}
-                  </p>
+                  </p> */}
                   <p className="flex items-center gap-1.5">
                     <MapPin size={12} /> {event.location}
                   </p>
