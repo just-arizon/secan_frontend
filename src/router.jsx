@@ -6,6 +6,8 @@ import About from "./pages/AboutUs";
 import Events from "./pages/Events";
 import Mission from "./pages/about/Mission";
 import Membership from "./pages/Membership";
+import Apply from "./pages/membership/Apply";
+import Categories from "./pages/membership/Categories";
 import Publications from "./pages/Publications";
 import FellowshipAwards from "./pages/FellowshipAwards";
 import Upcoming, { eventsLoader } from "./pages/events/Upcoming";
@@ -19,17 +21,18 @@ import NewsList from "./pages/news/NewsList";
 import MemberSpotlight, {
   memberSpotlightLoader,
 } from "./pages/members/MemberSpotlight";
-import Apply from "@/pages/membership/Apply";
-import Categories from "@/pages/membership/Categories";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <NotFound />,
+    // errorElement: <NotFound />,
     children: [
       { index: true, element: <Home /> },
-
+      {
+        path: "*",
+        element: <NotFound />,
+      },
       { path: "coming-soon", element: <ComingSoon /> },
 
       {
