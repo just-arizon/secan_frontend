@@ -1,0 +1,20 @@
+{/* Pull quote — only if present */}
+{article.quote && (
+  <blockquote
+    className="my-8 border-l-4 pl-5 py-1 text-lg italic text-gray-800"
+    style={{ borderColor: 'rgba(21,87,52,1)' }}
+  >
+    "{article.quote}"
+  </blockquote>
+)}
+
+{/* Highlights — only if present */}
+
+
+{/* Why this matters — only if present */}
+
+
+{/* Congratulations callout — only if present */}
+
+
+{/* Gallery — already guarded with article.gallery?.length > 0, no change needed */}

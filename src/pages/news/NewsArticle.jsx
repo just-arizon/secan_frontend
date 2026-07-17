@@ -70,41 +70,50 @@ export default function NewsArticle() {
       </div>
 
       {/* Pull quote */}
-      <blockquote
-        className="my-8 border-l-4 pl-5 py-1 text-lg italic text-gray-800"
-        style={{ borderColor: 'rgba(21,87,52,1)' }}
-      >
-        "{article.quote}"
-      </blockquote>
+     {article.quote && (
+  <blockquote
+    className="my-8 border-l-4 pl-5 py-1 text-lg italic text-gray-800"
+    style={{ borderColor: 'rgba(21,87,52,1)' }}
+  >
+    "{article.quote}"
+  </blockquote>
+)}
 
       {/* Highlights */}
-      <h2 className="text-sm font-bold uppercase tracking-wide text-green-700 mb-4">
-        Key Highlights from the Lecture
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-        {article.highlights.map((h) => (
-          <div key={h.title} className="border border-gray-200 rounded-xl p-4">
-            <span className="text-2xl">{h.emoji}</span>
-            <h3 className="text-sm font-bold text-gray-900 mt-2 mb-1">{h.title}</h3>
-            <p className="text-xs text-gray-500 leading-relaxed">{h.text}</p>
-          </div>
-        ))}
-      </div>
+     {article.highlights?.length > 0 && (
+  <>
+    <h2 className="text-sm font-bold uppercase tracking-wide text-green-700 mb-4">
+      Key Highlights
+    </h2>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+      {article.highlights.map((h) => (
+        <div key={h.title} className="border border-gray-200 rounded-xl p-4">
+          <span className="text-2xl">{h.emoji}</span>
+          <h3 className="text-sm font-bold text-gray-900 mt-2 mb-1">{h.title}</h3>
+          <p className="text-xs text-gray-500 leading-relaxed">{h.text}</p>
+        </div>
+      ))}
+    </div>
+  </>
+)}
 
       {/* Why this matters */}
-      <h2 className="text-sm font-bold uppercase tracking-wide text-green-700 mb-3">
-        Why This Matters
-      </h2>
-      <p className="text-sm text-gray-700 leading-relaxed mb-10">{article.whyMatters}</p>
+{article.whyMatters && (
+  <>
+    <h2 className="text-sm font-bold uppercase tracking-wide text-green-700 mb-3">
+      Why This Matters
+    </h2>
+    <p className="text-sm text-gray-700 leading-relaxed mb-10">{article.whyMatters}</p>
+  </>
+)}
 
       {/* Congratulations callout */}
-      <div
-        className="rounded-xl p-6 text-white mb-10"
-        style={{ background: 'rgba(21,87,52,1)' }}
-      >
-        <h2 className="text-sm font-bold uppercase tracking-wide mb-3">Congratulations from SECAN</h2>
-        <p className="text-sm text-white/85 leading-relaxed">{article.congrats}</p>
-      </div>
+     {article.congrats && (
+  <div className="rounded-xl p-6 text-white mb-10" style={{ background: 'rgba(21,87,52,1)' }}>
+    <h2 className="text-sm font-bold uppercase tracking-wide mb-3">Congratulations from SECAN</h2>
+    <p className="text-sm text-white/85 leading-relaxed">{article.congrats}</p>
+  </div>
+)}
 
       {/* Gallery */}
       {article.gallery?.length > 0 && (

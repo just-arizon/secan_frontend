@@ -8,6 +8,7 @@ import newsConference from "@/assets/news/conference.png";
 
 
 import { memberSpotlights } from '@/data/memberSpotlight'
+import { newsArticles } from '@/data/news'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -90,16 +91,25 @@ export function NewsSpotlight() {
           <div className="flex flex-col gap-5">
             <NewsItem
               image={newsWebinar}
-              title=" SECAN 2027 Conference will be hosted by the Federal University, Lafia"
+              title=" SECAN National President Delivers University of Nigeria's 244th Inaugural Lecture"
               excerpt="Interactive sessions for members and students."
               link="/news/esom-244th-inaugural-lecture"
             />
-            <NewsItem
-              image={newsAwards}
-              title="Members Receive International Awards"
+
+           { (() => {
+                const newsFeatured = newsArticles[1];
+                return(
+                  <>
+                          <NewsItem
+              image={newsFeatured.heroImage}
+              title={newsFeatured.title}
               excerpt="SECAN members recognised for excellence in research."
-              link="/coming-soon"
+              link={`/news/${newsFeatured.slug}`}
             />
+                  </>
+                )
+            })()}
+
             <NewsItem
               image={newsConference}
               title="SECAN 2027 Conference Registration Opens"

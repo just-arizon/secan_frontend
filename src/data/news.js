@@ -3,6 +3,7 @@ import heroImage from '@/assets/news/esom-lecture-hero.png'
 import gallery1 from '@/assets/news/esom-lecture-1.png'
 import gallery2 from '@/assets/news/esom-lecture-2.png'
 import gallery3 from '@/assets/news/esom-lecture-3.png'
+import fulafiaHero from '@/assets/news/fulafia.png'
 
 export const newsArticles = [
   {
@@ -52,7 +53,35 @@ export const newsArticles = [
       { image: gallery3, caption: 'Presentation of a commemorative plaque to Prof. Esom following the lecture.' },
     ],
   },
+
+  {
+    slug: 'fulafia-to-host-secan-2027',
+    category: 'Conferences',
+    date: '26 March 2026',
+    readingTime: '3 mins',
+    author: 'SECAN Publicity Unit',
+    title: 'Federal University of Lafia Selected to Host SECAN 2027 Conference',
+    dek: "Federal University of Lafia to host SECAN's 25th Scientific Conference and Annual General Meeting.",
+    heroImage: fulafiaHero, // import this at the top like the others
+    heroCaption:
+      'Federal University of Lafia, Nasarawa State — host institution for SECAN 2027.',
+    intro:
+      'The Federal University of Lafia (FULafia), Nasarawa State, Nigeria, has been selected as the host institution for the 25th Scientific Conference and Annual General Meeting (AGM) of the Society of Experimental and Clinical Anatomists of Nigeria (SECAN), scheduled to be held in 2027.',
+    body: [
+      "The announcement was made during the Society's Annual General Meeting on 26 March 2026, held as part of the 24th Scientific Conference and Annual General Meeting at Delta State University, Abraka. The decision followed the successful presentation of the hosting bid by the Federal University of Lafia and its subsequent approval by the Society's members.",
+      "The successful bid was presented by Professor Sunday A. Musa of the Department of Anatomy, Federal University of Lafia, highlighting the University's preparedness, infrastructure, and commitment to hosting a conference that reflects SECAN's enduring tradition of scientific excellence, innovation, and professional engagement.",
+      'Following the presentation, members of the Society unanimously endorsed the bid, officially confirming the Federal University of Lafia as the host institution for SECAN\'s 2027 Annual Scientific Conference and Annual General Meeting.',
+      "As SECAN's flagship scientific event, the Annual Scientific Conference and AGM serves as a premier platform for anatomists, biomedical scientists, clinicians, educators, researchers, students, and allied health professionals to present cutting-edge research, exchange ideas, build collaborations, and advance the anatomical sciences.",
+      'The Society looks forward to welcoming delegates to Lafia in 2027 for another memorable conference that will promote scientific discovery, professional development, and meaningful engagement within Nigeria\'s anatomical community and beyond.',
+    ],
+    whyMatters:
+      'Further information regarding the conference theme, important dates, abstract submission, registration, accommodation, and sponsorship opportunities will be announced through the SECAN website and official communication channels in due course.',
+    congrats:
+      'SECAN extends its warm congratulations to the management of the Federal University of Lafia, the Department of Anatomy, and the Local Organizing Team on the successful bid. The Society is confident that the University will provide an excellent setting for a successful conference and looks forward to working collaboratively towards delivering an outstanding scientific meeting.',
+    // no `quote`, no `highlights`, no `gallery` — omitted entirely, not left as empty arrays
+  },
 ]
+
 
 export function getNewsBySlug(slug) {
   return newsArticles.find((a) => a.slug === slug)
