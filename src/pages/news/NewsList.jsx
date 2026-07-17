@@ -1,10 +1,18 @@
 // pages/news/NewsList.jsx
 import { Link } from 'react-router-dom'
 import { newsArticles } from '@/data/news'
+import { ArrowLeft } from 'lucide-react'
+
 
 export default function NewsList() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <Link
+              to="/"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold text-green-700 mb-6 hover:underline"
+            >
+              <ArrowLeft size={14} /> Back to home
+            </Link>
       <h1 className="text-2xl font-bold text-gray-900 mb-8">News</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {newsArticles.map((a) => (
