@@ -3,6 +3,7 @@ import { Outlet, useNavigation } from 'react-router-dom'
 import { Navbar } from "@/components/layout/Navbar"
 import { Footer } from "@/components/layout/Footer"
 import { Preloader } from "@/components/ui/preloader"
+import  ScrollUp  from "@/components/ScrollUp"
 import './App.css'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Navbar />
       <main>
         <Outlet />
+        <ScrollUp />
       </main>
       <Footer />
 
