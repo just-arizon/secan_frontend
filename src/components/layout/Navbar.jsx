@@ -38,7 +38,7 @@ export function Navbar() {
       name: "Membership",
       subMenu: [
         { name: "Categories", link: "/membership/categories" },
-        { name: "Apply", link: "/membership/apply" },
+        { name: "Apply For Membership", link: "/membership/apply-for-membership" },
       ],
     },
     {
@@ -97,12 +97,6 @@ export function Navbar() {
                 className="text-green-700 hover:text-primary transition lg:text-xs font-semibold"
               >
                 Member Portal
-              </a>
-              <a
-                href="/coming-soon"
-                className="text-green-700 hover:text-primary transition lg:text-xs font-semibold"
-              >
-                Join SECAN
               </a>
               <a
                 href="/coming-soon"

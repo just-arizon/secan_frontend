@@ -50,7 +50,7 @@ export const router = createBrowserRouter([
         element: <Membership />,
         children: [
           { path: "categories", element: <Categories /> },
-          { path: "apply", element: <Apply /> },
+          { path: "apply-for-membership", element: <Apply /> },
         ],
       },
       {

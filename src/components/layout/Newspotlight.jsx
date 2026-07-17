@@ -109,12 +109,7 @@ export function NewsSpotlight() {
               );
             })()}
 
-            <NewsItem
-              image={newsConference}
-              title="SECAN 2027 Conference Registration Opens"
-              excerpt="Early bird registration now open."
-              link="/coming-soon"
-            />
+
           </div>
 
           <Link
