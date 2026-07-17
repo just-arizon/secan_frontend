@@ -3,7 +3,7 @@ import nelsonPhoto from '@/assets/nelson-ejumedia.png'
 export const memberSpotlights = [
   {
     slug: 'nelson-ejumedia',
-    name: 'Nelson Ejumedia',
+    name: 'Nelson O. Ejumedia',
     institution: 'Department of Human Anatomy and Cell Biology, Delta State University, Abraka',
     photo: nelsonPhoto,
     researchInterests: [

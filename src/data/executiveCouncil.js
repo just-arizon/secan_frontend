@@ -39,7 +39,7 @@ export const council = [
   {
     tier: 3,
     role: 'Treasurer',
-    name: 'Santos E. Ebebha, MBBS, Ph.D',
+    name: 'Santos E. Ehebha, MBBS, Ph.D',
     title: 'Senior Lecturer, Dept. of Human Anatomy & Cell Biology',
     institution: 'Delta State University, Abraka, Delta State',
   },
@@ -75,7 +75,7 @@ export const council = [
     tier: 5,
     role: 'Ex-Officio II (Immediate Past Secretary-General)',
     name: 'Sonny C. Okoseimiema, Ph.D',
-    title: 'Associate Professor, Department of Anatomy',
+    title: 'Senior Lecturer',
     institution: 'University of Port Harcourt, Rivers State',
   },
 ]

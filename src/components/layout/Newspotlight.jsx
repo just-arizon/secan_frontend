@@ -6,9 +6,8 @@ import newsWebinar from "@/assets/news/webinar.jpeg";
 import newsAwards from "@/assets/news/awards.png";
 import newsConference from "@/assets/news/conference.png";
 
-
-import { memberSpotlights } from '@/data/memberSpotlight'
-import { newsArticles } from '@/data/news'
+import { memberSpotlights } from "@/data/memberSpotlight";
+import { newsArticles } from "@/data/news";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -96,18 +95,18 @@ export function NewsSpotlight() {
               link="/news/esom-244th-inaugural-lecture"
             />
 
-           { (() => {
-                const newsFeatured = newsArticles[1];
-                return(
-                  <>
-                          <NewsItem
-              image={newsFeatured.heroImage}
-              title={newsFeatured.title}
-              excerpt="SECAN members recognised for excellence in research."
-              link={`/news/${newsFeatured.slug}`}
-            />
-                  </>
-                )
+            {(() => {
+              const newsFeatured = newsArticles[1];
+              return (
+                <>
+                  <NewsItem
+                    image={newsFeatured.heroImage}
+                    title={newsFeatured.title}
+                    excerpt="SECAN members recognised for excellence in research."
+                    link={`/news/${newsFeatured.slug}`}
+                  />
+                </>
+              );
             })()}
 
             <NewsItem
