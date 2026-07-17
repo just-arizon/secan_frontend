@@ -23,7 +23,7 @@ export default function MemberSpotlight() {
         <ArrowLeft size={14} /> Back to home
       </Link>
 
-      <div className="text-xs font-semibold text-green-700 uppercase">Member Spotlight</div>
+      <div className="text-xl font-bold text-green-700 uppercase">Member Spotlight</div>
 
       <div className="flex gap-5 items-center mt-3 mb-8">
         <img
