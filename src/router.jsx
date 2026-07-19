@@ -21,6 +21,7 @@ import NewsList from "./pages/news/NewsList";
 import MemberSpotlight, {
   memberSpotlightLoader,
 } from "./pages/members/MemberSpotlight";
+import Join from "./pages/Join";
 
 export const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ export const router = createBrowserRouter([
           { path: "history", element: <ComingSoon /> },
           { path: "our-mission", element: <Mission /> },
         ],
+      },
+      {
+        path:"/join",
+        element: <Join />
       },
 
       {
