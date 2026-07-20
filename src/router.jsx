@@ -22,6 +22,9 @@ import MemberSpotlight, {
   memberSpotlightLoader,
 } from "./pages/members/MemberSpotlight";
 import Join from "./pages/Join";
+import PortalLogin from './pages/portal/PortalLogin'
+import PortalLayout from './pages/portal/PortalLayout'
+import Dashboard from './pages/portal/Dashboard'
 
 export const router = createBrowserRouter([
   {
@@ -46,8 +49,14 @@ export const router = createBrowserRouter([
         ],
       },
       {
-        path:"/join",
-        element: <Join />
+        path: "/join",
+        element: <Join />,
+      },
+      { path: "member-portal", element: <PortalLogin /> },
+      {
+        path: "member-portal",
+        element: <PortalLayout />,
+        children: [{ path: "dashboard", element: <Dashboard /> }],
       },
 
       {

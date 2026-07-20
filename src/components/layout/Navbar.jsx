@@ -93,7 +93,7 @@ export function Navbar() {
           <div className="flex justify-end items-center gap-5">
             <div className="flex items-center gap-6 text-sm">
               <a
-                href="/coming-soon"
+                href="/member-portal"
                 className="text-green-700 hover:text-primary transition lg:text-xs font-semibold"
               >
                 Member Portal
