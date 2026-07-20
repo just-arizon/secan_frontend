@@ -265,13 +265,13 @@ export function Navbar() {
               </div>
 
               <div className="my-3 w-full">
-                <button
+                <Link to="/join"
                   className="bg-red-400 hover:bg-secondary/90 text-white px-4 py-2 rounded-full font-semibold
               text-sm
                transition transform hover:scale-105 w-full"
                 >
                   JOIN SECAN
-                </button>
+                </Link>
               </div>
             </motion.div>
           )}
