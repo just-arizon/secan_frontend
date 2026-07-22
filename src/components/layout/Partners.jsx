@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import ifaaLogo from "@/assets/partners/ifaa.png";
+import ifaaLogo from "@/assets/partners/ifaa-logo.png";
 
 
 export function Partners() {
@@ -57,12 +57,12 @@ export function Partners() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="flex items-center justify-center h-20 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all duration-300 cursor-pointer group p-4"
+              className="flex items-center justify-center transition-all duration-300 cursor-pointer group p-1"
             >
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="max-h-12 w-auto object-contain group-hover:grayscale-0 transition-all duration-300"
+                className="max-h-16 w-auto object-contain group-hover:grayscale-0 transition-all duration-300"
               />
             </motion.div>
           ))}

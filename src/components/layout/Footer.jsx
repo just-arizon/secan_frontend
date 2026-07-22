@@ -47,7 +47,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  to="#"
+                  to="/about/our-mission"
                   className="text-white/80 hover:text-white transition"
                 >
                   About SECAN
@@ -55,26 +55,26 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  to="#"
+                  to="/events/annual-conference"
                   className="text-white/80 hover:text-white transition"
                 >
-                  Events
+                  Annual Scientific Conference
                 </Link>
               </li>
               <li>
                 <Link
-                  to="#"
+                  to="/events/workshops"
+                  className="text-white/80 hover:text-white transition"
+                >
+                  Workshop & Webinars
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/coming-soon"
                   className="text-white/80 hover:text-white transition"
                 >
                   Career Center
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className="text-white/80 hover:text-white transition"
-                >
-                  FAQ
                 </Link>
               </li>
             </ul>
@@ -86,36 +86,22 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  to="#"
+                  to="/join"
                   className="text-white/80 hover:text-white transition"
                 >
                   Join SECAN
                 </Link>
               </li>
+    
               <li>
                 <Link
-                  to="#"
-                  className="text-white/80 hover:text-white transition"
-                >
-                  Membership Benefits
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
+                  to="/membership/categories"
                   className="text-white/80 hover:text-white transition"
                 >
                   Member Categories
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="#"
-                  className="text-white/80 hover:text-white transition"
-                >
-                  Renewal
-                </Link>
-              </li>
+
             </ul>
           </div>
 
@@ -125,28 +111,13 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  to="#"
+                  to="https://jecajournal.com/index.php/home"
                   className="text-white/80 hover:text-white transition"
                 >
                   JECA
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="#"
-                  className="text-white/80 hover:text-white transition"
-                >
-                  Position Statements
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="#"
-                  className="text-white/80 hover:text-white transition"
-                >
-                  Regional News
-                </Link>
-              </li>
+              
             </ul>
           </div>
 
