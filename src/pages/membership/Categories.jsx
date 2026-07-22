@@ -43,7 +43,7 @@ export default function Categories() {
 
       <div className="flex flex-wrap gap-3">
         <Link
-          to="/membership/apply"
+          to="/membership/apply-for-membership"
           className="bg-green-700 hover:bg-green-800 text-white text-sm font-semibold px-5 py-2.5 rounded transition"
         >
           Apply for Membership
