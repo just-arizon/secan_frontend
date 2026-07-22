@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import ifaaLogo from "@/assets/partners/ifaa-logo.png";
+import ifaaLogo from "@/assets/partners/Ifaa-logo.png";
 
 
 export function Partners() {
