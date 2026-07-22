@@ -91,7 +91,7 @@ export function NewsSpotlight() {
             <NewsItem
               image={newsWebinar}
               title=" SECAN National President Delivers University of Nigeria's 244th Inaugural Lecture"
-              excerpt="Interactive sessions for members and students."
+              excerpt="The Vault and the Vandals: Keeping Watch against the Inadvertent Breach to Nature's Best Neural Defence..."
               link="/news/esom-244th-inaugural-lecture"
             />
 
@@ -102,7 +102,7 @@ export function NewsSpotlight() {
                   <NewsItem
                     image={newsFeatured.heroImage}
                     title={newsFeatured.title}
-                    excerpt="SECAN members recognised for excellence in research."
+                    excerpt="The Federal University of Lafia (FULafia), Nasarawa State, Nigeria, has been selected as the host institution for the 25th Scientific Conference..."
                     link={`/news/${newsFeatured.slug}`}
                   />
                 </>

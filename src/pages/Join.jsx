@@ -105,7 +105,7 @@ export default function Join() {
       {/* Final CTA */}
       <section className="text-center pb-20">
         <Link
-          to="/membership/apply"
+          to="/membership/apply-for-membership"
           className="inline-block bg-green-700 hover:bg-green-800 text-white text-sm font-semibold px-6 py-3 rounded transition"
         >
           Start Your Application
