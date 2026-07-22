@@ -86,7 +86,7 @@ export function Hero() {
             className="flex flex-wrap gap-3"
           >
             <Link
-              to="/member-portal"
+              to="/join"
               className="flex items-center gap-2 border border-white text-white text-sm font-semibold px-4 py-2.5 rounded hover:bg-white/10 transition"
             >
               <User size={16} /> Become a Member
@@ -98,7 +98,7 @@ export function Hero() {
               <CalendarCheck size={16} /> Register for Conference
             </Link> */}
             <Link
-              to="/coming-soon"
+              to="https://jecajournal.com/index.php/home"
               className="flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white text-sm font-semibold px-4 py-2.5 rounded transition"
             >
               <BookOpen size={16} /> Explore JECA

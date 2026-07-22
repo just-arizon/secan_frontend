@@ -22,9 +22,11 @@ import MemberSpotlight, {
   memberSpotlightLoader,
 } from "./pages/members/MemberSpotlight";
 import Join from "./pages/Join";
-import PortalLogin from './pages/portal/PortalLogin'
-import PortalLayout from './pages/portal/PortalLayout'
-import Dashboard from './pages/portal/Dashboard'
+import PortalLogin from "./pages/portal/PortalLogin";
+import PortalLayout from "./pages/portal/PortalLayout";
+import Dashboard from "./pages/portal/Dashboard";
+import Conference from "./pages/events/Conference";
+import Workshops from "./pages/events/Workshops";
 
 export const router = createBrowserRouter([
   {
@@ -83,6 +85,8 @@ export const router = createBrowserRouter([
             loader: eventsLoader,
           },
           { path: "past-events", element: <ComingSoon /> },
+          { path: "annual-conference", element: <Conference /> },
+          { path: "workshops", element: <Workshops /> },
         ],
       },
       {

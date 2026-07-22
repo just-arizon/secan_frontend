@@ -42,10 +42,10 @@ export function Navbar() {
       ],
     },
     {
-      name: "Events",
+      name: "Meetings & Events",
       subMenu: [
-        { name: "Upcoming Conferences", link: "/events/upcoming-events" },
-        { name: "Past Events", link: "/events/past-events" },
+        { name: "Annual Scientific Conference", link: "/events/annual-conference" },
+        { name: "Workshops & Webinars", link: "/events/workshops" },
       ],
     },
     {
@@ -265,13 +265,18 @@ export function Navbar() {
               </div>
 
               <div className="my-3 w-full">
-                <Link to="/join"
+                <button
                   className="bg-red-400 hover:bg-secondary/90 text-white px-4 py-2 rounded-full font-semibold
               text-sm
                transition transform hover:scale-105 w-full"
                 >
-                  JOIN SECAN
-                </Link>
+                  <Link to="/join"
+                  className="w-full"
+                  >
+                                      JOIN SECAN
+                  </Link>
+
+                </button>
               </div>
             </motion.div>
           )}
