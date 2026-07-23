@@ -99,7 +99,7 @@ export function Navbar() {
                 Member Portal
               </a>
               <a
-                href="/coming-soon"
+                href="/contact"
                 className="text-green-700 hover:text-primary transition lg:text-xs font-semibold"
               >
                 Contact Us

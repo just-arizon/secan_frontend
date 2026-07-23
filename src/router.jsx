@@ -27,6 +27,7 @@ import PortalLayout from "./pages/portal/PortalLayout";
 import Dashboard from "./pages/portal/Dashboard";
 import Conference from "./pages/events/Conference";
 import Workshops from "./pages/events/Workshops";
+import ContactUs from './pages/ContactUs'
 
 export const router = createBrowserRouter([
   {
@@ -125,6 +126,7 @@ export const router = createBrowserRouter([
         element: <NewsArticle />,
         loader: newsArticleLoader,
       },
+      { path: 'contact', element: <ContactUs /> },
     ],
   },
 ]);
