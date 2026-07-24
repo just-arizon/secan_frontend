@@ -182,7 +182,7 @@ export function Navbar() {
 
             {/* Right Button - Desktop */}
             <div className="hidden lg:block">
-              <Link to="/join"
+              <Link to="/membership/apply-for-membership"
                 className="bg-red-400 hover:bg-secondary/90 text-white px-4 py-2 rounded-full font-semibold
               text-sm
                transition transform hover:scale-105"
