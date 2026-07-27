@@ -1,10 +1,35 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { membershipIntro, membershipCategories, membershipBenefits } from '@/data/membership'
+import { CheckCircle2 } from 'lucide-react'
+
 
 export default function Categories() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      
+      {/* Why join */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Why Join SECAN
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {membershipBenefits.map((b, i) => (
+            <motion.div
+              key={b}
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
+              className="flex items-start gap-3 border border-gray-200 rounded-lg p-4"
+            >
+              <CheckCircle2 className="text-green-700 flex-shrink-0 mt-0.5" size={18} />
+              <p className="text-sm text-gray-600">{b}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       <h1 className="text-2xl font-bold text-gray-900 mb-4">Membership Categories</h1>
       <p className="text-sm text-gray-500 leading-relaxed max-w-2xl mb-10">{membershipIntro}</p>
 

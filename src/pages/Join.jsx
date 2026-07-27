@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { CheckCircle2 } from 'lucide-react'
-import { membershipBenefits, membershipCategories } from '@/data/membership'
+import { membershipCategories } from '@/data/membership'
 import { memberSpotlights } from '@/data/memberSpotlight'
 
 export default function Join() {
@@ -25,38 +24,17 @@ export default function Join() {
           </motion.h1>
           <p className="text-white/85 text-sm mb-8 leading-relaxed">
             Join a growing network of anatomists, researchers, educators, and students advancing
-            excellence in anatomical sciences across Nigeria and beyond.
+            excellence in experimental and clinical Anatomy across Nigeria and beyond.
           </p>
           <Link
             to="/membership/apply"
             className="inline-block bg-red-500 hover:bg-red-600 text-white text-sm font-semibold px-6 py-3 rounded transition"
           >
-            Apply for Membership
+            Start your Application
           </Link>
         </div>
       </section>
 
-      {/* Why join */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 className="text-lg font-bold text-green-700 uppercase mb-6 text-center">
-          Why Join SECAN
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {membershipBenefits.map((b, i) => (
-            <motion.div
-              key={b}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.05 }}
-              className="flex items-start gap-3 border border-gray-200 rounded-lg p-4"
-            >
-              <CheckCircle2 className="text-green-700 flex-shrink-0 mt-0.5" size={18} />
-              <p className="text-sm text-gray-600">{b}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
 
       {/* Categories preview */}
       <section className="bg-gray-50 py-16">

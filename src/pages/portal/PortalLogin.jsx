@@ -72,7 +72,13 @@ export default function PortalLogin() {
         <p className="text-xs text-gray-400 text-center mt-6">
           Not a member yet?{' '}
           <Link to="/membership/apply" className="text-green-700 font-semibold hover:underline">
-            Apply here
+            Create an account?
+          </Link>
+        </p>
+        <p className="text-xs text-gray-400 text-center mt-2">
+          Don't have an account yet?{' '}
+          <Link to="/membership/apply" className="text-green-700 font-semibold hover:underline">
+            Forget password?
           </Link>
         </p>
       </div>
