@@ -37,8 +37,8 @@ export function Navbar() {
     {
       name: "Membership",
       subMenu: [
-        { name: "Categories", link: "/membership/categories" },
-        { name: "Apply For Membership", link: "/membership/apply-for-membership" },
+        { name: "Become a member", link: "/membership/become-a-member" },
+        // { name: "Apply For Membership", link: "/membership/apply-for-membership" },
       ],
     },
     {
