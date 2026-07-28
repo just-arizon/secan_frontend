@@ -6,7 +6,7 @@ import About from "./pages/AboutUs";
 import Events from "./pages/Events";
 import Mission from "./pages/about/Mission";
 import Membership from "./pages/Membership";
-// import Apply from "./pages/membership/Apply";
+import Apply from "./pages/membership/Apply";
 // import Categories from "./pages/membership/BecomeMember";
 import Publications from "./pages/Publications";
 import FellowshipAwards from "./pages/FellowshipAwards";
@@ -69,6 +69,7 @@ export const router = createBrowserRouter([
         children: [
           { index: true, element: <BecomeMember /> },
           { path: "become-a-member", element: <BecomeMember /> },
+          { path: "apply-for-membership", element: <Apply /> },
         ],
       },
       {

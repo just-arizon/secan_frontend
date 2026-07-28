@@ -270,7 +270,7 @@ export function Navbar() {
               text-sm
                transition transform hover:scale-105 w-full"
                 >
-                  <Link to="/join"
+                  <Link to="/membership/apply-for-membership"
                   className="w-full"
                   >
                                       JOIN SECAN

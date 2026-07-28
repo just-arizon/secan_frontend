@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { CheckCircle2 } from 'lucide-react'
+import { CheckCircle2, ArrowLeft } from 'lucide-react'
 
 const initialState = {
   title: '',
@@ -58,7 +58,6 @@ export default function Apply() {
 
   function handleSubmit(e) {
     e.preventDefault()
-
     if (!form.certifyTrue || !form.agreeConstitution) {
       setError('Please confirm both declaration checkboxes before submitting.')
       return
@@ -97,26 +96,17 @@ export default function Apply() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-      <h1 className="text-2xl font-bold text-gray-900 mb-2">Apply for Membership</h1>
-      <p className="text-sm text-gray-500 leading-relaxed mb-2">
-        Thank you for your interest in joining the Society of Experimental and Clinical
-        Anatomists of Nigeria (SECAN).
-      </p>
-      <p className="text-sm text-gray-500 leading-relaxed mb-8">
-        SECAN welcomes anatomists, biomedical scientists, clinicians, veterinarians, educators,
-        researchers, students, and other professionals with an interest in experimental and
-        clinical anatomical sciences. Membership provides opportunities for professional
-        networking, scientific collaboration, continuing education, leadership, and
-        participation in the Society's activities.
-      </p>
+      <Link
+        to="/"
+        className="inline-flex items-center gap-1.5 text-xs font-semibold text-green-700 mb-6 hover:underline"
+      >
+        <ArrowLeft size={14} /> Back to Home
+      </Link>
 
-      <div className="bg-green-50 border border-green-100 rounded-xl p-4 mb-10 text-sm text-gray-700">
-        Before you apply, you can review full details on{' '}
-        <Link to="/membership/categories" className="text-green-700 font-semibold hover:underline">
-          Membership Categories, Registration Fee, and Annual Dues
-        </Link>
-        .
-      </div>
+      <h1 className="text-2xl font-bold text-gray-900 mb-2">Membership Application</h1>
+      <p className="text-sm text-gray-500 leading-relaxed mb-10">
+        Complete the form below to apply for SECAN membership.
+      </p>
 
       <form onSubmit={handleSubmit} className="space-y-5">
         {error && (
@@ -125,7 +115,6 @@ export default function Apply() {
           </p>
         )}
 
-        {/* Personal Information */}
         <SectionHeading>Personal Information</SectionHeading>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           <Field label="Title">
@@ -161,7 +150,6 @@ export default function Apply() {
           </Field>
         </div>
 
-        {/* Contact Information */}
         <SectionHeading>Contact Information</SectionHeading>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Field label="Email Address *">
@@ -183,7 +171,6 @@ export default function Apply() {
           </Field>
         </div>
 
-        {/* Professional Information */}
         <SectionHeading>Professional Information</SectionHeading>
         <Field label="Institution/Organisation">
           <input className={inputClass} value={form.institution} onChange={(e) => update('institution', e.target.value)} />
@@ -205,7 +192,6 @@ export default function Apply() {
           </Field>
         </div>
 
-        {/* Membership Details */}
         <SectionHeading>Membership Details</SectionHeading>
         <Field label="Membership Category *">
           <select className={inputClass} value={form.category} onChange={(e) => update('category', e.target.value)}>
@@ -223,7 +209,6 @@ export default function Apply() {
           <textarea rows={3} className={inputClass} value={form.researchInterests} onChange={(e) => update('researchInterests', e.target.value)} />
         </Field>
 
-        {/* Declaration */}
         <SectionHeading>Declaration</SectionHeading>
         <label className="flex items-start gap-2.5 text-sm text-gray-600">
           <input

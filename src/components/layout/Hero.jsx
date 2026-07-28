@@ -86,7 +86,7 @@ export function Hero() {
             className="flex flex-wrap gap-3"
           >
             <Link
-              to="/membership/apply-for-membership"
+              to="/membership/become-a-member"
               className="flex items-center gap-2 border border-white text-white text-sm font-semibold px-4 py-2.5 rounded hover:bg-white/10 transition"
             >
               <User size={16} /> Become a Member
