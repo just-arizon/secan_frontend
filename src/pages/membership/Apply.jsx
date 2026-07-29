@@ -21,6 +21,7 @@ const initialState = {
   specialization: '',
   category: '',
   otherMemberships: '',
+  password,
   researchInterests: '',
   certifyTrue: false,
   agreeConstitution: false,
@@ -208,6 +209,7 @@ export default function Apply() {
         <Field label="Research Interests">
           <textarea rows={3} className={inputClass} value={form.researchInterests} onChange={(e) => update('researchInterests', e.target.value)} />
         </Field>
+        
 
         <SectionHeading>Declaration</SectionHeading>
         <label className="flex items-start gap-2.5 text-sm text-gray-600">

@@ -40,7 +40,10 @@ export const membershipBenefits = [
   'Reduced registration fees for the SECAN Annual Scientific Conference and other Society events.',
   'Opportunities to present your research at SECAN scientific meetings.',
   'Access to professional development programmes, workshops, and webinars.',
-  
+  'Networking and collaboration with other members.',
+  'Eligibility to serve on SECAN committees and contribute to Society initiatives.',
+  'Eligibility for Society awards, honours, and professional recognition.',
+  'Regular updates on SECAN activities, conferences, and opportunities.',
 ]
 
 export const registrationFee = {

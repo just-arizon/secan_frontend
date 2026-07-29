@@ -39,8 +39,8 @@ export default function Join() {
       {/* Categories preview */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg font-bold text-green-700 uppercase mb-6 text-center">
-            Choose Your Membership Category
+          <h2 className="text-lg font-bold mb-6 text-center">
+            You can review the details on Membership Categories, Registration Fee, and Annual Dues Here (link to the page showing all the details highlighted)
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-8">
             {membershipCategories.slice(0, 3).map((cat) => {
