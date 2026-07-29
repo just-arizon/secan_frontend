@@ -71,13 +71,13 @@ export default function PortalLogin() {
 
         <p className="text-xs text-gray-400 text-center mt-6">
            Don't have an account yet?{' '}
-          <Link to="/membership/apply" className="text-green-700 font-semibold hover:underline">
+          <Link to="/membership/apply-for-membership" className="text-green-700 font-semibold hover:underline">
             Create an account?
           </Link>
         </p>
         <p className="text-xs text-gray-400 text-center mt-1 mb-3">
          {' '}
-          <Link to="/membership/apply" className="text-green-700 font-semibold hover:underline">
+          <Link to="/" className="text-green-700 font-semibold hover:underline">
             Forget password?
           </Link>
         </p>
