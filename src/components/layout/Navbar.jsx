@@ -182,7 +182,7 @@ export function Navbar() {
 
             {/* Right Button - Desktop */}
             <div className="hidden lg:block">
-              <Link to="/membership/apply-for-membership"
+              <Link to="/join"
                 className="bg-red-400 hover:bg-secondary/90 text-white px-4 py-2 rounded-full font-semibold
               text-sm
                transition transform hover:scale-105"
@@ -270,7 +270,7 @@ export function Navbar() {
               text-sm
                transition transform hover:scale-105 w-full"
                 >
-                  <Link to="/membership/apply-for-membership"
+                  <Link to="/join"
                   className="w-full"
                   >
                                       JOIN SECAN

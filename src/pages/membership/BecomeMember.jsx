@@ -43,7 +43,7 @@ export default function BecomeMember() {
       </div>
 
       {/* Benefits */}
-      <h2 className="text-lg font-bold text-green-700 uppercase mb-2">Membership Benefits</h2>
+      <h2 className="text-lg font-bold text-green-700 uppercase mb-2">Annual Membership Dues</h2>
       <p className="text-sm text-gray-500 leading-relaxed max-w-2xl mb-6">
         SECAN offers valuable opportunities for professional growth, networking, leadership, and
         lifelong learning. As a SECAN member, you can enjoy:
