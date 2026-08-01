@@ -122,7 +122,7 @@ export default function Mission() {
               Nigeria on the global anatomical sciences stage.
             </p>
             <Link
-              to="/coming-soon"
+              to="/about/executive-council"
               className="inline-block bg-green-700 hover:bg-green-800 text-white text-sm font-semibold px-5 py-2.5 rounded transition"
             >
               Meet the Council
@@ -148,7 +148,7 @@ export default function Mission() {
               advancing anatomical sciences.
             </p>
             <Link
-              to="/coming-soon"
+              to="/membership/become-a-member"
               className="inline-block bg-red-500 hover:bg-red-600 text-white text-sm font-semibold px-6 py-3 rounded transition"
             >
               Become a Member

@@ -75,7 +75,7 @@ export const council = [
     tier: 5,
     role: 'Ex-Officio II (Immediate Past Secretary-General)',
     name: 'Sonny C. Okoseimiema, Ph.D',
-    title: 'Senior Lecturer, Department of Anatomy;',
+    title: 'Senior Lecturer, Department of Anatomy',
     institution: 'University of Port Harcourt, Rivers State',
   },
 ]
