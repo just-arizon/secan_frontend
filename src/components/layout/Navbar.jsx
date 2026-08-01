@@ -243,6 +243,21 @@ export function Navbar() {
                   </Link>
                 ),
               )}
+              <div className="flex flex-col gap-3 my-3 text-sm">
+              <a
+                href="/member-portal"
+                className="text-green-700 hover:text-primary transition lg:text-xs font-semibold"
+              >
+                Member Portal
+              </a>
+              <a
+                href="/contact"
+                className="text-green-700 hover:text-primary transition lg:text-xs font-semibold"
+              >
+                Contact Us
+              </a>
+            </div>
+
               <div className="flex items-center gap-4 my-3">
                 <div className="flex gap-3">
                   {socialIcons.map((item) => {
